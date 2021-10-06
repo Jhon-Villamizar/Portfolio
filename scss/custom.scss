@@ -1,0 +1,18 @@
+@import "../node_modules/bootswatch/dist/litera/_variables.scss";
+
+$secondary:     $pink !default;
+:root {
+  --bs-secondary: #e83e8c !important;
+  --bs-secondary-rgb: 232, 62, 140 !important;
+}
+body {
+  background-color: $black;
+  .btn-outline-secondary {
+    color: #e83e8c;
+    border-color: #e83e8c;
+    &:hover {
+      background-color: #e83e8c;
+      border-color: #e83e8c;
+    }
+  }
+}

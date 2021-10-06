@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "next",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build",
+    "deploy": "npx serverless"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,11 @@
   },
   "homepage": "https://github.com/Jhon-Villamizar/Portfolio#readme",
   "dependencies": {
+    "bootswatch": "^5.1.2",
     "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
