@@ -78,8 +78,7 @@ typings/
 
 # Next.js build output
 .next
-.serverless
-.serverless_nextjs
+
 
 # Nuxt.js build / generate output
 .nuxt
@@ -96,6 +95,7 @@ dist
 
 # Serverless directories
 .serverless/
+.serverless_nextjs
 
 # FuseBox cache
 .fusebox/

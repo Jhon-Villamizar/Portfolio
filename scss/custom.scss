@@ -7,12 +7,17 @@ $secondary:     $pink !default;
 }
 body {
   background-color: $black;
-  .btn-outline-secondary {
-    color: #e83e8c;
-    border-color: #e83e8c;
-    &:hover {
-      background-color: #e83e8c;
-      border-color: #e83e8c;
-    }
+  .system-img {
+    left: 3px;
+    position: relative;
+    top: -13px;
+    z-index: -1;
+  }
+  .button-space {
+    margin-bottom: 350px;
+  }
+  .flot-table {
+    position: relative;
+    top: -200px;
   }
 }

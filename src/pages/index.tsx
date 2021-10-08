@@ -1,8 +1,13 @@
+import AboutMe from "../components/aboutMe";
+import Header from "../components/header";
 import Layout from "../contents/layout";
+import Skills from "../components/skills";
 
 const Index = () => (
-  <Layout >
-    <h1>Hello World!</h1>
+  <Layout>
+    <Header />
+    <AboutMe />
+    <Skills />
   </Layout>
 )
 
