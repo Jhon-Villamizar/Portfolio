@@ -1,5 +1,5 @@
 const AboutMe = () => (
-  <div className="bg-primary">
+  <div className="bg-about">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-8 mt-5">

@@ -7,17 +7,52 @@ $secondary:     $pink !default;
 }
 body {
   background-color: $black;
-  .system-img {
-    left: 3px;
+  .bg-about {
+    background-color: #4360ed;
     position: relative;
-    top: -13px;
-    z-index: -1;
+    top: -53px;
+  }
+  .bg-dark {
+    background-color: $black !important;
+  }
+  .big-border {
+    border-radius: 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
   .button-space {
     margin-bottom: 350px;
   }
-  .flot-table {
-    position: relative;
-    top: -200px;
+  .card {
+    &:hover {
+      img {
+        &:hover {
+          filter: blur(3px);
+        }
+      }
+      .card-img-overlay {
+        display: block
+      }
+    }
+
+    .card-img-overlay {
+      display: none;
+    }
   }
+  .container-sections {
+    margin-top: 150px;
+  }
+  .list-style {
+    list-style: none;
+    padding-left: unset;
+  }
+  .system-img {
+    margin-top: 100px;
+  }
+  .flot-table {
+    margin-top: -300px;
+  }
+  .text-blue {
+    color: #4360ed;
+  }
+
 }
