@@ -1,5 +1,4 @@
 // headers
-import 'bootswatch/dist/litera/bootstrap.min.css';
 import type { AppProps } from 'next/app'
 import '/scss/custom.scss';
 

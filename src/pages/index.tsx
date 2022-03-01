@@ -5,15 +5,10 @@ import Skills from "../components/skills";
 import React from "react";
 import Proyects from "../components/proyects";
 import Companies from "../components/companies";
+import Navbar from "../components/navbar";
 
 const Index = () => (
-  <Layout>
-    <Header />
-    <AboutMe />
-    <Skills />
-    <Proyects />
-    <Companies />
-  </Layout>
+  <Navbar />
 )
 
 export default Index;

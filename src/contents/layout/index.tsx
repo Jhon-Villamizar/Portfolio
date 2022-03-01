@@ -1,3 +1,4 @@
+import { Button, Drawer } from '@mui/material';
 import { ReactNode } from 'react';
 import Navbar from '../../components/navbar';
 
@@ -7,7 +8,6 @@ interface LayoutProps {
 
 const Layout = ({children}: LayoutProps) => (
   <>
-    <Navbar />
     <div>
       {children}
     </div>
