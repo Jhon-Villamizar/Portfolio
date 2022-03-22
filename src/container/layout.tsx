@@ -16,8 +16,8 @@ const Layout: FC = () => {
             left-5
             right-0
             rounded-full
-            w-9
-            h-9
+            w-6
+            h-6
             flex
             items-center
             justify-center
@@ -45,11 +45,9 @@ const Layout: FC = () => {
         </div>
       ) : (
         <div className="w-1/2 xl:w-2/12 lg:w-2/12 md:w-1/4 sm:w-1/3">
-          <div className="relative">
+          <div>
             <button
-              className="fixed
-              top-3
-              left-3"
+              className="float-right bg-primaryBold rounded-r-sm"
               type="button"
               onClick={() => {
                 setMenu(true);
@@ -57,7 +55,7 @@ const Layout: FC = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-primaryBg"
+                className="h-4 w-4 text-primaryBg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
