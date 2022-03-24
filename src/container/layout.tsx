@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
-import Home from '../components/home';
-import Nav from '../components/nav';
+import Home from '../components/home/home';
+import Nav from '../components/nav/nav';
 
 const Layout: FC = () => {
   const [menu, setMenu] = useState(true);
 
   return (
-    <div className="flex flex-row h-full">
+    <div className="flex flex-row min-h-screen">
       {menu ? (
         <div className="relative">
           <button
@@ -47,7 +47,7 @@ const Layout: FC = () => {
         <div className="w-1/2 xl:w-2/12 lg:w-2/12 md:w-1/4 sm:w-1/3">
           <div>
             <button
-              className="float-right bg-primaryBold rounded-r-sm"
+              className="float-right bg-primaryBgSoft rounded-r-sm"
               type="button"
               onClick={() => {
                 setMenu(true);
@@ -55,7 +55,7 @@ const Layout: FC = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-primaryBg"
+                className="h-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -73,7 +73,6 @@ const Layout: FC = () => {
           <Nav />
         </div>
       )}
-
       <div
         className={
           menu ? 'w-full' : 'w-1/2 xl:w-10/12 lg:w-10/12 md:w-3/4 sm:w-2/3'

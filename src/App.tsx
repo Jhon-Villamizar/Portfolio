@@ -9,8 +9,8 @@ const App: FC = () => {
     <div
       className={
         lightTheme
-          ? 'theme-light h-screen bg-primaryBg'
-          : 'theme-dark h-screen bg-primaryBg'
+          ? 'theme-light h-screen bg-primaryBg text-primary'
+          : 'theme-dark h-screen bg-primaryBg text-primary'
       }
     >
       <div className="relative">
