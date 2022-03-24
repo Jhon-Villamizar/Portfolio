@@ -13,14 +13,18 @@ const Nav: FC = () => (
         src={logo}
         alt="JV"
         className="w-20 h-20 cursor-pointer"
-        onClick={() => { console.log('click image'); }}
+        onClick={() => {
+          console.log('click image');
+        }}
         aria-hidden="true"
       />
     </div>
     <div>
       <ul>
         <li
-          onClick={() => { console.log('click about'); }}
+          onClick={() => {
+            console.log('click about');
+          }}
           aria-hidden="true"
           className="cursor-pointer"
         >
