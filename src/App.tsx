@@ -1,10 +1,10 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { FC, useState } from 'react';
 import Layout from './container/layout';
 import './App.scss';
 
 const App: FC = () => {
   const [lightTheme, setLightTheme] = useState(true);
+
   return (
     <div
       className={
