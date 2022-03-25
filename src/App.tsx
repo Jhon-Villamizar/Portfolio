@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
-import Layout from './container/layout';
+import Layout from './container';
 import './App.scss';
 
 const App: FC = () => {
-  const [lightTheme, setLightTheme] = useState(true);
+  const [lightTheme, setLightTheme] = useState(false);
 
   return (
     <div

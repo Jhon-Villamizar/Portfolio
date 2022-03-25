@@ -14,6 +14,17 @@
   --color-primaryDark: #000000;
   --color-divider: #2c3948;
   --color-name: #66FCF1;
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0C10; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1F2833;
+    border-radius: 100px;
+  }
 }
 .theme-light {
   --color-onPrimaryBg: #52ab98;
@@ -24,8 +35,28 @@
   --color-primaryBg: #c8d8e4;
   --color-divider: #337a8d;
   --color-name: #c8d8e4;
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #c8d8e4; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2b6777;
+    border-radius: 100px;
+  }
 }
 
 body {
-  font-family: 'Red Hat Mono', monospace;;
+  font-family: 'Red Hat Mono', monospace;
+  h1 {
+    font-size: 3.75rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  h3 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }

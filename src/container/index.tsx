@@ -1,12 +1,17 @@
 import { FC, useState } from 'react';
-import Home from '../components/home/home';
-import Nav from '../components/nav/nav';
+import { Route, Routes } from 'react-router-dom';
+import Nav from '../components/nav';
+import About from '../pages/about';
+import Contact from '../pages/contact';
+import Home from '../pages/home';
+import Skills from '../pages/skills';
+import Work from '../pages/work';
 
 const Layout: FC = () => {
   const [menu, setMenu] = useState(true);
 
   return (
-    <div className="flex flex-row min-h-screen">
+    <div className="flex flex-row h-screen">
       {menu ? (
         <div className="relative">
           <button
@@ -69,16 +74,23 @@ const Layout: FC = () => {
               </svg>
             </button>
           </div>
-
           <Nav />
         </div>
       )}
       <div
         className={
-          menu ? 'w-full' : 'w-1/2 xl:w-10/12 lg:w-10/12 md:w-3/4 sm:w-2/3'
+          menu
+            ? 'w-full overflow-y-auto'
+            : 'w-1/2 xl:w-10/12 lg:w-10/12 md:w-3/4 sm:w-2/3 overflow-y-auto'
         }
       >
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );
