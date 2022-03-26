@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import art from '../../assets/img/midArt.png';
 
 const Header: FC = () => (
   <div className="flex flex-row h-screen">
-    <div className="basis-2/3 p-10 self-center">
+    <div className="basis-4/5 p-10 self-center">
       <h1>
         Hi,
         <br />
@@ -31,7 +32,11 @@ const Header: FC = () => (
         Contact me!
       </button>
     </div>
-    <div className="basis-1/3">02</div>
+    <div className="basis-1/5">
+      <div className="h-full flex justify-end items-center">
+        <img src={art} alt="face" className="w-44 z-0 grayscale blur-sm" />
+      </div>
+    </div>
   </div>
 );
 

@@ -34,7 +34,7 @@ const App: FC = () => {
           {!lightTheme ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-primaryBold"
+              className="h-5 w-5 z-auto text-primaryBold"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -69,7 +69,7 @@ const App: FC = () => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-primaryBold"
+              className="h-5 w-5 z-auto text-primaryBold"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
