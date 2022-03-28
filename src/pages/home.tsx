@@ -1,12 +1,14 @@
 import { FC } from 'react';
 import Header from '../components/header';
-import Portfolio from '../components/portfolio';
+import Me from '../components/me';
+import Companies from '../components/companies';
 
 const Home: FC = () => (
-  <>
+  <div>
     <Header />
-    <Portfolio />
-  </>
+    {/* <Me />
+    <Companies /> */}
+  </div>
 );
 
 export default Home;

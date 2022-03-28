@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/img/JV.png';
+import email from '../../assets/img/emailblanco2.png';
 
 const Nav: FC = () => (
   <div
@@ -41,7 +42,7 @@ const Nav: FC = () => (
           <h3>Contact</h3>
         </div>
       </Link>
-      <div className="pt-5 flex flex-row justify-center">
+      <div className="p-5 flex flex-row justify-center">
         <a
           className="mx-3 text-primary"
           href="https://www.linkedin.com/in/jhon-villamizar-b92818160/"
@@ -228,6 +229,14 @@ const Nav: FC = () => (
             3z"
             />
           </svg>
+        </a>
+        <a
+          className="mx-3"
+          href="mailto:jhamiltonvo@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={email} alt="email" />
         </a>
       </div>
     </nav>
