@@ -2,23 +2,29 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 const Me: FC = () => (
-  <section className="flex flex-col py-10 px-28">
-    <div>
-      <h1 className="text-6xl mb-5 font-black">About</h1>
+  <section className="flex flex-row">
+    <div className="basis-3/5 p-10 pl-28 self-center">
+      <h1 className="text-6xl mb-5 font-black">About Me!</h1>
       <p className="text-justify">
-        Jhon is the best representation of commitment and effort. With 4 years
+        I&apos;m a Full Stack Developer located in Colombia,and
+        I&apos;m the best representation of commitment and effort. With 4 years
         of experience creating different web applications such as UI (user
         interfaces), Rest Services mainly with non-relational databases and
-        integrations between different types of applications and components. One
-        of the main characteristics is never stop improve and learning new ways
-        to create products and services.
+        integrations between different types of applications and components.
+        <br />
+        <br />
+        One of the main characteristics is never stop improve and learning
+        new ways to create products and services.
+        On the other hand, I love sports, music, video games and craft beer,
+        it&apos;s always nice to be able to spend some
+        time chatting while drinking
+        beer and talking to people you love.
       </p>
-    </div>
-    <div className="ml-auto w-fit">
-      <Link to="/about">
-        <button
-          type="button"
-          className="
+      <div className="ml-auto w-fit">
+        <Link to="/about">
+          <button
+            type="button"
+            className="
             transition
             ease-in-out
             delay-150
@@ -34,11 +40,13 @@ const Me: FC = () => (
             hover:bg-primaryBold
             hover:text-[#000]
             hover:font-semibold"
-        >
-          More About Me!
-        </button>
-      </Link>
+          >
+            More About Me!
+          </button>
+        </Link>
+      </div>
     </div>
+
   </section>
 );
 
