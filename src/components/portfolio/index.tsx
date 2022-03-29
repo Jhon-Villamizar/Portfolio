@@ -1,12 +1,16 @@
 import { FC } from 'react';
 
 const Portfolio: FC = () => (
-  <div className="flex flex-row min-h-screen">
-    <div className="basis-2/3 p-10 self-center">
-      <h1 className="text-6xl font-black">Portfolio</h1>
+  <section className="flex flex-row h-screen">
+    <div className="basis-3/5 p-10 pl-28 self-center">
+      <h1 className="text-6xl mb-5 font-black">Portfolio</h1>
+      <p className="info">Pratech</p>
+      <p className="info">Isobar</p>
+      <p className="info">Net Consult</p>
+      <p className="info">Globant</p>
+      <p className="info">Perficient</p>
     </div>
-    <div className="basis-1/3">02</div>
-  </div>
+  </section>
 );
 
 export default Portfolio;

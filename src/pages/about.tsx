@@ -5,7 +5,6 @@ const About: FC = () => (
   <div>
     <Me />
   </div>
-
 );
 
 export default About;

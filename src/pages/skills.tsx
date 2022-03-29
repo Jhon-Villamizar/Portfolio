@@ -1,5 +1,6 @@
 import { FC } from 'react';
+import Experince from '../components/experince';
 
-const Skills: FC = () => <h1>Skilld</h1>;
+const Skills: FC = () => <Experince />;
 
 export default Skills;

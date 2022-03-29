@@ -1,5 +1,6 @@
 import { FC } from 'react';
+import Portfolio from '../components/portfolio';
 
-const Work: FC = () => <h1>Work</h1>;
+const Work: FC = () => <Portfolio />;
 
 export default Work;

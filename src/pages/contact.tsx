@@ -1,5 +1,6 @@
 import { FC } from 'react';
+import Form from '../components/form';
 
-const Contact: FC = () => <h1>Contact</h1>;
+const Contact: FC = () => <Form />;
 
 export default Contact;

@@ -59,4 +59,31 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  p.info {
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  form {
+    margin-top: 20px;
+    padding: 5px;
+    input {
+      outline: none;
+      margin: 5px auto;
+      padding-left: 10px;
+      width: 48%;
+      &[placeholder="Subject"] {
+        width: 98%;
+      }
+    }
+    textarea {
+      outline: none;
+      margin: 5px auto;
+      padding: 10px;
+      width: 98%;
+    }
+    button {
+      width: 98%;
+      margin: 0 auto;
+    }
+  }
 }
