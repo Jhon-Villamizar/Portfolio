@@ -1,12 +1,47 @@
-import { FC } from 'react';
+import React, { FC, useState } from 'react';
+import { motion } from 'framer-motion';
 
-const Proyects: FC = () => (
-  <div className="flex flex-row min-h-screen">
-    <div className="basis-2/3 p-10 self-center">
-      <h1 className="text-6xl font-black">Proyects</h1>
+/**
+ * This is an example of layout animations in Framer Motion 2.
+ *
+ * It's as simple as adding a `layout` prop to the `motion.div`. When
+ * the flexbox changes, the handle smoothly animates between layouts.
+ *
+ * Try adding whileHover={{ scale: 1.2 }} to the handle - the layout
+ * animation is now fully compatible with user-set transforms.
+ */
+
+// eslint-disable-next-line import/export
+const Proyects: FC = () => {
+  const [isOn, setIsOn] = useState(false);
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const toggleSwitch = () => setIsOn(!isOn);
+
+  const spring = {
+    type: 'spring',
+    stiffness: 700,
+    damping: 30,
+  };
+
+  return (
+    <div
+      className="handleSwitch"
+      data-isOn={isOn}
+      onClick={toggleSwitch}
+      aria-hidden="true"
+    >
+      <motion.div
+        className="
+          w-3.5
+          h-3.5
+          bg-[#fff]
+          rounded-full"
+        layout
+        transition={spring}
+      />
     </div>
-    <div className="basis-1/3">02</div>
-  </div>
-);
+  );
+};
 
 export default Proyects;

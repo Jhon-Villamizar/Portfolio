@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Proyects from '../proyects';
 
 const Me: FC = () => (
   <section className="flex flex-row h-screen">
@@ -20,6 +21,9 @@ const Me: FC = () => (
         it&apos;s always nice to be able to spend some time chatting while
         drinking beer and talking to people you love.
       </p>
+    </div>
+    <div className="basis-2/5">
+      <Proyects />
     </div>
   </section>
 );

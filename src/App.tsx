@@ -1,6 +1,12 @@
 import { FC, useState } from 'react';
+import { motion } from 'framer-motion';
 import Layout from './container';
 
+const spring = {
+  type: 'spring',
+  stiffness: 700,
+  damping: 30,
+};
 const App: FC = () => {
   const [lightTheme, setLightTheme] = useState(false);
 
@@ -13,33 +19,23 @@ const App: FC = () => {
       }
     >
       <div className="relative">
-        <button
-          className="
-          fixed
-          top-0
-          right-1
-          rounded-full
-          w-9
-          h-9
-          flex
-          items-center
-          justify-center
-          cursor-pointer"
-          onClick={() => {
-            setLightTheme(!lightTheme);
-          }}
-          type="button"
+        <div className="
+        flex
+        flex-row
+        fixed
+        top-0
+        right-1
+        w-10"
         >
-          {!lightTheme ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 z-auto text-primaryBold"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 z-auto text-primaryBold"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="
                   M10 2a1 1
                   0 011 1v1a1
                   1 0 11-2 0V3a1
@@ -62,18 +58,33 @@ const App: FC = () => {
                   01-1.414-1.414l.707-.707a1
                   1 0 011.414 1.414zM4
                   11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 z-auto text-primaryBold"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="
+              clipRule="evenodd"
+            />
+          </svg>
+          <div
+            className="handleSwitch"
+            data-isOn={lightTheme}
+            onClick={() => { setLightTheme(!lightTheme); }}
+            aria-hidden="true"
+          >
+            <motion.div
+              className="
+          w-3.5
+          h-3.5
+          bg-[#fff]
+          rounded-full"
+              layout
+              transition={spring}
+            />
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 z-auto text-primaryBold"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="
                 M17.293
                 13.293A8
                 8 0 016.707
@@ -81,10 +92,9 @@ const App: FC = () => {
                 8.001 0
                 1010.586
                 10.586z"
-              />
-            </svg>
-          )}
-        </button>
+            />
+          </svg>
+        </div>
       </div>
       <Layout />
     </div>
