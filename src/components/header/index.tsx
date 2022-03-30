@@ -33,7 +33,7 @@ const Header: FC = () => (
             hover:text-[#000]
             hover:font-semibold"
         >
-          Contact me!
+          Contact me
         </button>
       </Link>
     </div>
