@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Nav from '../components/nav';
+import Example from '../components/proyects';
 import About from '../pages/about';
 import Contact from '../pages/contact';
 import Home from '../pages/home';
@@ -9,6 +10,12 @@ import Work from '../pages/work';
 
 const Layout: FC = () => {
   const [menu, setMenu] = useState(true);
+
+  useEffect(() => {
+    console.log('====================================');
+    console.log('layout');
+    console.log('====================================');
+  });
 
   return (
     <div className="flex flex-row h-screen">

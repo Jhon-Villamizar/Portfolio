@@ -1,103 +1,69 @@
-import { FC, useState } from 'react';
+import { createContext, FC, useReducer, useState } from 'react';
 import { motion } from 'framer-motion';
 import Layout from './container';
+import luna from './assets/img/luna.png';
+import sol from './assets/img/sol.png';
+import reducer from './db/reducer';
+import initialState from './db/state';
 
-const spring = {
-  type: 'spring',
-  stiffness: 700,
-  damping: 30,
-};
+const dbContext = createContext(['', false, false]);
+
 const App: FC = () => {
-  const [lightTheme, setLightTheme] = useState(false);
+  const value = useReducer(reducer, initialState);
+  const [theme, setTheme] = useState(false);
+
+  const spring = {
+    type: 'spring',
+    stiffness: 700,
+    damping: 30,
+  };
 
   return (
-    <div
-      className={
-        lightTheme
-          ? 'theme-light h-screen bg-primaryBg text-primary'
-          : 'theme-dark h-screen bg-primaryBg text-primary'
-      }
-    >
-      <div className="relative">
-        <div className="
-        flex
-        flex-row
-        fixed
-        top-0
-        right-1
-        w-10"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 z-auto text-primaryBold"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="
-                  M10 2a1 1
-                  0 011 1v1a1
-                  1 0 11-2 0V3a1
-                  1 0 011-1zm4 8a4
-                  4 0 11-8 0 4 4 0
-                  018 0zm-.464 4.95l.707.707a1
-                  1 0 001.414-1.414l-.707-.707a1
-                  1 0 00-1.414 1.414zm2.12-10.607a1
-                  1 0 010 1.414l-.706.707a1 1 0
-                  11-1.414-1.414l.707-.707a1
-                  1 0 011.414 0zM17 11a1
-                  1 0 100-2h-1a1 1 0
-                  100 2h1zm-7 4a1 1
-                  0 011 1v1a1 1 0
-                  11-2 0v-1a1 1 0
-                  011-1zM5.05 6.464A1
-                  1 0 106.465 5.05l-.708-.707a1
-                  1 0 00-1.414 1.414l.707.707zm1.414
-                  8.486l-.707.707a1 1 0
-                  01-1.414-1.414l.707-.707a1
-                  1 0 011.414 1.414zM4
-                  11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              clipRule="evenodd"
-            />
-          </svg>
+    <dbContext.Provider value={value}>
+      <div
+        className={
+          theme
+            ? 'theme-light h-screen bg-primaryBg text-primary'
+            : 'theme-dark h-screen bg-primaryBg text-primary'
+        }
+      >
+        <div className="relative">
           <div
-            className="handleSwitch"
-            data-isOn={lightTheme}
-            onClick={() => { setLightTheme(!lightTheme); }}
-            aria-hidden="true"
+            className="
+            fixed
+            top-3
+            right-5
+            w-12"
           >
-            <motion.div
-              className="
-          w-3.5
-          h-3.5
-          bg-[#fff]
-          rounded-full"
-              layout
-              transition={spring}
-            />
+            <div
+              className="handleSwitch"
+              data-isOn={theme}
+              onClick={() => {
+                setTheme(!theme);
+              }}
+              aria-hidden="true"
+            >
+              <motion.div
+                className="
+                w-5
+                h-5
+                bg-[#fff]
+                rounded-full"
+                layout
+                transition={spring}
+              >
+                {!theme ? (
+                  <img src={luna} alt="" className="w-full" />
+                ) : (
+                  <img src={sol} alt="" className="w-full" />
+                )}
+              </motion.div>
+            </div>
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 z-auto text-primaryBold"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              d="
-                M17.293
-                13.293A8
-                8 0 016.707
-                2.707a8.001
-                8.001 0
-                1010.586
-                10.586z"
-            />
-          </svg>
         </div>
+        <Layout />
       </div>
-      <Layout />
-    </div>
+    </dbContext.Provider>
   );
 };
 
