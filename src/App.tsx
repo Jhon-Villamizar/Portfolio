@@ -1,16 +1,12 @@
-import { createContext, FC, useReducer, useState } from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Layout from './container';
 import luna from './assets/img/luna.png';
 import sol from './assets/img/sol.png';
-import reducer from './db/reducer';
-import initialState from './db/state';
-
-const dbContext = createContext(['', false, false]);
+import useCounter from './db/useCounter';
 
 const App: FC = () => {
-  const value = useReducer(reducer, initialState);
-  const [theme, setTheme] = useState(false);
+  const { state, dispatch } = useCounter();
 
   const spring = {
     type: 'spring',
@@ -19,51 +15,49 @@ const App: FC = () => {
   };
 
   return (
-    <dbContext.Provider value={value}>
-      <div
-        className={
-          theme
+    <div
+      className={
+          state.theme
             ? 'theme-light h-screen bg-primaryBg text-primary'
             : 'theme-dark h-screen bg-primaryBg text-primary'
         }
-      >
-        <div className="relative">
-          <div
-            className="
+    >
+      <div className="relative">
+        <div
+          className="
             fixed
             top-3
             right-5
             w-12"
+        >
+          <div
+            className="handleSwitch"
+            data-isOn={state.theme}
+            onClick={() => {
+              dispatch('theme');
+            }}
+            aria-hidden="true"
           >
-            <div
-              className="handleSwitch"
-              data-isOn={theme}
-              onClick={() => {
-                setTheme(!theme);
-              }}
-              aria-hidden="true"
-            >
-              <motion.div
-                className="
+            <motion.div
+              className="
                 w-5
                 h-5
                 bg-[#fff]
                 rounded-full"
-                layout
-                transition={spring}
-              >
-                {!theme ? (
-                  <img src={luna} alt="" className="w-full" />
-                ) : (
-                  <img src={sol} alt="" className="w-full" />
-                )}
-              </motion.div>
-            </div>
+              layout
+              transition={spring}
+            >
+              {!state.theme ? (
+                <img src={luna} alt="" className="w-full" />
+              ) : (
+                <img src={sol} alt="" className="w-full" />
+              )}
+            </motion.div>
           </div>
         </div>
-        <Layout />
       </div>
-    </dbContext.Provider>
+      <Layout />
+    </div>
   );
 };
 

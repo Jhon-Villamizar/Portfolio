@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Props } from 'framer-motion/types/types';
-import { FC, ReactNode, ReactType } from 'react';
+import { ReactType } from 'react';
 
 const variants = {
   open: {

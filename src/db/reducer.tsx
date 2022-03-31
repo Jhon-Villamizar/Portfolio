@@ -1,16 +1,29 @@
+import { defaultState } from './context';
+
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const reducer = (
-  state: any,
-  action: { type: string; menu: boolean; theme: boolean },
+export type Action = 'menu' | 'theme';
+export type Dispatch = (action: Action) => void;
+export type State = typeof defaultState;
+
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const counterReducer = (
+  state: State,
+  action: Action,
 ) => {
-  switch (action.type) {
-    case 'setFirstName':
-      return { ...state, firstName: action.menu };
-    case 'setFamilyName':
-      return { ...state, familyName: action.theme };
+  switch (action) {
+    case 'menu':
+      return {
+        menu: !state.menu,
+        theme: state.theme,
+      };
+    case 'theme':
+      return {
+        menu: state.menu,
+        theme: !state.theme,
+      };
     default:
-      throw new Error('unexpected action type');
+      return state;
   }
 };
 
-export default reducer;
+export default counterReducer;

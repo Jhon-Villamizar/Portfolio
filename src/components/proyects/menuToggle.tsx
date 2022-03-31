@@ -1,10 +1,10 @@
-import { FC, ReactNode, ReactType } from 'react';
+import { ReactType } from 'react';
 import { motion } from 'framer-motion';
 import { Props } from 'framer-motion/types/types';
 
 export const MenuToggle: ReactType<Props> = ({ toggle }: any) => (
   <button onClick={toggle} type="button">
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <svg width="23" height="23" viewBox="0 0 23 23" className="togglesvg">
       <motion.path
         fill="transparent"
         strokeWidth="3"

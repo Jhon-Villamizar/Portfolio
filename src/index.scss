@@ -105,7 +105,7 @@ body {
       top: 0;
       left: 0;
       bottom: 0;
-      width: 300px;
+      width: 250px;
     }
     
     .background {
@@ -113,7 +113,7 @@ body {
       top: 0;
       left: 0;
       bottom: 0;
-      width: 300px;
+      width: 250px;
       background: #fff;
     }
     
@@ -131,6 +131,9 @@ body {
       height: 50px;
       border-radius: 50%;
       background: transparent;
+      .togglesvg {
+        display: unset;
+      }
     }
     
     ul,

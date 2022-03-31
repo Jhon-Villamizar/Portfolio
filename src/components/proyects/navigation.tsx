@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { MenuItem } from './menuItem';
 
 const variants = {

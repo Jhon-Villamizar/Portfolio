@@ -1,9 +1,10 @@
-import { useContext, useEffect, useRef } from 'react';
-import { motion, useCycle } from 'framer-motion';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useDimensions } from './use-dimensions';
 // eslint-disable-next-line import/extensions
 import { MenuToggle } from './menuToggle';
 import { Navigation } from './navigation';
+import useCounter from '../../db/useCounter';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -26,22 +27,15 @@ const sidebar = {
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const Example = (ref: any) => {
-  const [state, dispatch] = useContext(dbContext);
-  const [isOpen, toggleOpen] = useCycle(false, true);
+const Example = () => {
+  const { state, dispatch } = useCounter();
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-
-  useEffect(() => {
-    console.log('====================================');
-    console.log(containerRef);
-    console.log('====================================');
-  });
 
   return (
     <motion.nav
       initial={false}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={state.menu ? 'open' : 'closed'}
       custom={height}
       ref={containerRef}
       className="example"
@@ -51,7 +45,7 @@ const Example = (ref: any) => {
         variants={sidebar}
       />
       <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle toggle={() => dispatch('menu')} />
     </motion.nav>
   );
 };
