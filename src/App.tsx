@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Layout from './container';
 import luna from './assets/img/luna.png';
 import sol from './assets/img/sol.png';
-import useCounter from './db/useCounter';
+import useCounter from './hooks/useCounter';
 
 const App: FC = () => {
   const { state, dispatch } = useCounter();
@@ -18,8 +18,8 @@ const App: FC = () => {
     <div
       className={
           state.theme
-            ? 'theme-light h-screen bg-primaryBg text-primary'
-            : 'theme-dark h-screen bg-primaryBg text-primary'
+            ? 'theme-light h-screen bg-primaryBg text-primary app'
+            : 'theme-dark h-screen bg-primaryBg text-primary app'
         }
     >
       <div className="relative">

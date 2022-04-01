@@ -4,11 +4,11 @@ import { Props } from 'framer-motion/types/types';
 
 export const MenuToggle: ReactType<Props> = ({ toggle }: any) => (
   <button onClick={toggle} type="button">
-    <svg width="23" height="23" viewBox="0 0 23 23" className="togglesvg">
+    <svg width="15" height="15" viewBox="0 0 23 23" className="togglesvg">
       <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="hsl(0, 0%, 100%)"
         strokeLinecap="round"
         variants={{
           closed: { d: 'M 2 2.5 L 20 2.5' },
@@ -18,7 +18,7 @@ export const MenuToggle: ReactType<Props> = ({ toggle }: any) => (
       <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="hsl(0, 0%, 100%)"
         strokeLinecap="round"
         d="M 2 9.423 L 20 9.423"
         variants={{
@@ -30,7 +30,7 @@ export const MenuToggle: ReactType<Props> = ({ toggle }: any) => (
       <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="hsl(0, 0%, 100%)"
         strokeLinecap="round"
         variants={{
           closed: { d: 'M 2 16.346 L 20 16.346' },

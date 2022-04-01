@@ -1,10 +1,9 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useDimensions } from './use-dimensions';
-// eslint-disable-next-line import/extensions
 import { MenuToggle } from './menuToggle';
 import { Navigation } from './navigation';
-import useCounter from '../../db/useCounter';
+import useCounter from '../../hooks/useCounter';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -16,7 +15,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: 'circle(30px at 40px 40px)',
+    clipPath: 'circle(20px at 30px 30px)',
     transition: {
       delay: 0.5,
       type: 'spring',

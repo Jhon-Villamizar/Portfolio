@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CounterContext } from './context';
+import { CounterContext } from '../db/context';
 
 const useCounter = ():any => {
   const context = useContext(CounterContext);

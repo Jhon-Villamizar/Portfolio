@@ -114,7 +114,7 @@ body {
       left: 0;
       bottom: 0;
       width: 250px;
-      background: #fff;
+      background: #2b6777;
     }
     
     button {
@@ -125,14 +125,15 @@ body {
       -ms-user-select: none;
       cursor: pointer;
       position: absolute;
-      top: 18px;
-      left: 15px;
+      top: 5px;
+      left: 5px;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background: transparent;
       .togglesvg {
         display: unset;
+        color: #fff;
       }
     }
     
@@ -185,6 +186,15 @@ body {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+  }
+
+  .app {
+    .main {
+      transition: margin 1s;
+      &[data-isOn="true"] {
+        margin-left: 208px;
+      }
     }
   }
 

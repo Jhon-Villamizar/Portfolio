@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Example from '../components/proyects';
-import useCounter from '../db/useCounter';
+import useCounter from '../hooks/useCounter';
 import About from '../pages/about';
 import Contact from '../pages/contact';
 import Home from '../pages/home';
@@ -21,7 +21,7 @@ const Layout: FC = () => {
 }
       >
         <Example />
-        <div className={state.menu ? 'ml-52' : ''}>
+        <div data-isOn={state.menu} className="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
