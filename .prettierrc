@@ -6,8 +6,5 @@
   "trailingComma": "all",
   "jsxSingleQuote": true,
   "bracketSpacing": true,
-  "endOfLine": "lf",
-  "extends": [
-    "stylelint-config-prettier"
-  ]
+  "endOfLine": "lf"
 }
