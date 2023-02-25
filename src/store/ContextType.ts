@@ -1,4 +1,4 @@
 export type ContextType = {
-	theme: boolean
-	lenguage: string
+  theme: boolean
+  lenguage: string
 }

@@ -1,4 +1,4 @@
 export const InicialState = {
-	theme: true,
-	lenguage: 'en'
+  theme: true,
+  lenguage: 'en',
 }
