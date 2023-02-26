@@ -6,7 +6,7 @@ type ActionType = {
   payload: boolean
 }
 
-export const themeReducer = (state: ContextType, action: ActionType) => {
+export const contextReducer = (state: ContextType, action: ActionType) => {
   switch (action.type) {
     case SET_THEME:
       return { ...state, theme: action.payload }
