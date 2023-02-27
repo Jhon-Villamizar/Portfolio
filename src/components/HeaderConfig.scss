@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  width: 70%;
+  .header-config {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 70%;
+  }
+}

@@ -12,7 +12,7 @@ i18n
       loadPath: '../locales/{{lng}}/{{ns}}.json',
     },
     fallbackLng: ['es', 'en'],
-    ns: ['welcome'],
+    ns: ['texts'],
     debug: false,
     detection: {
       order: [
@@ -31,6 +31,7 @@ i18n
       escapeValue: true,
       formatSeparator: ',',
     },
+    load: 'languageOnly',
   })
 
 export default i18n
