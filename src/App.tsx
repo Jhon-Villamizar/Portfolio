@@ -1,7 +1,5 @@
 import { useEffect, useReducer } from 'react'
 import './App.scss'
-import { SET_THEME } from './store/actions/types'
-import { AdminConsumer } from './store/Context'
 import { InicialState } from './store/InitialState'
 import { contextReducer } from './store/reducer'
 
@@ -12,17 +10,26 @@ const App = () => {
   }, [state])
 
   return (
-    <button
-      className='App'
-      onClick={() =>
-        dispatch({
-          type: 'SET_THEME',
-          payload: !state.theme,
-        })
-      }
-    >
-      App
-    </button>
+    <>
+      <button
+        className='App'
+        onClick={() =>
+          dispatch({
+            type: 'SET_THEME',
+            payload: !state.theme,
+          })
+        }
+      >
+        App
+      </button>
+      <select
+        value={state.lenguage}
+        onChange={({ target }) => dispatch({ type: 'SET_LEGUAGES', payload: target.value })}
+      >
+        <option value='es'>Espanol</option>
+        <option value='en'>Ingles</option>
+      </select>
+    </>
   )
 }
 
