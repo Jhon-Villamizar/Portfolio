@@ -13,11 +13,11 @@ const App = () => {
     <Layout>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/experience' element={<Experience />} />
-          <Route path='/skills' element={<Skills />} />
+          <Route path='Portfolio/' element={<Home />} />
+          <Route path='Portfolio/about' element={<About />} />
+          <Route path='Portfolio/contact' element={<Contact />} />
+          <Route path='Portfolio/experience' element={<Experience />} />
+          <Route path='Portfolio/skills' element={<Skills />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
