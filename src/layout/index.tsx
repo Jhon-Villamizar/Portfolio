@@ -1,11 +1,14 @@
 import { FC, PropsWithChildren } from 'react'
-import HeaderConfig from '../components/HeaderConfig'
+import Footer from '../components/Footer/Footer'
+import HeaderConfig from '../components/HeaderConfig/HeaderConfig'
+import './layout.scss'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div>
+    <div className='container-layout'>
       <HeaderConfig />
-      {children}
+      <div className='container'>{children}</div>
+      <Footer />
     </div>
   )
 }

@@ -1,11 +1,11 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect, useReducer } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SET_LANGUAGES, SET_THEME } from '../store/actions/types'
-import { InicialState } from '../store/InitialState'
-import { contextReducer } from '../store/reducer'
+import { SET_LANGUAGES, SET_THEME } from '../../store/actions/types'
+import { InicialState } from '../../store/InitialState'
+import { contextReducer } from '../../store/reducer'
 import i18n from 'i18next'
-import '../i18n/index'
+import '../../i18n/index'
 import './HeaderConfig.scss'
 
 const HeaderConfig = () => {
@@ -22,8 +22,8 @@ const HeaderConfig = () => {
   }
 
   return (
-    <div className='container'>
-      <div className='header-config'>
+    <div className='config-container'>
+      <div className='config-bar'>
         <button
           className='App'
           onClick={() =>
