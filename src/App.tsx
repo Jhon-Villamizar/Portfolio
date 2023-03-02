@@ -1,4 +1,5 @@
-import './App.scss'
+/*eslint-disable @typescript-eslint/no-empty-function */
+import { useEffect, useReducer } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './layout'
 import Home from './pages/Home'
@@ -7,6 +8,8 @@ import Contact from './pages/Contact'
 import Experience from './pages/Experince'
 import Skills from './pages/Skills'
 import NotFound from './pages/NotFound'
+import './App.scss'
+import { AdminConsumer } from './store/Context'
 
 const App = () => {
   return (

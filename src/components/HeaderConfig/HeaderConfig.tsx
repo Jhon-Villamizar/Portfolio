@@ -1,38 +1,33 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect, useReducer } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SET_LANGUAGES, SET_THEME } from '../../store/actions/types'
-import { InicialState } from '../../store/InitialState'
-import { contextReducer } from '../../store/reducer'
+import { CgMenuRound } from 'react-icons/cg'
 import i18n from 'i18next'
+import { AdminConsumer } from '../../store/Context'
 import '../../i18n/index'
 import './HeaderConfig.scss'
 
 const HeaderConfig = () => {
   const { t } = useTranslation(['texts'])
-  const [state, dispatch] = useReducer(contextReducer, InicialState)
+  const { theme, language, updateLanguage, updateTheme } = AdminConsumer()
 
   useEffect(() => {
-    console.log('effect state => ', state, i18n.language)
-    i18n.changeLanguage(state.language)
-  }, [state])
+    console.log('effect state => ', language, i18n.language, theme)
+    i18n.changeLanguage(language)
+  }, [language, theme])
 
   const handlerLanguage = (value: string): void => {
-    dispatch({ type: SET_LANGUAGES, payload: value })
+    updateLanguage(value)
+  }
+
+  const handlerMenu = () => {
+    console.log('menu')
   }
 
   return (
     <div className='config-container'>
       <div className='config-bar'>
-        <button
-          className='App'
-          onClick={() =>
-            dispatch({
-              type: SET_THEME,
-              payload: !state.theme,
-            })
-          }
-        >
+        <button className='App' onClick={() => updateTheme(theme === 'dark' ? 'light' : 'dark')}>
           App
         </button>
         <select
@@ -42,6 +37,7 @@ const HeaderConfig = () => {
           <option value='es'>{t('language.es')}</option>
           <option value='en'>{t('language.en')}</option>
         </select>
+        <CgMenuRound className='menu' onClick={handlerMenu} />
       </div>
     </div>
   )
