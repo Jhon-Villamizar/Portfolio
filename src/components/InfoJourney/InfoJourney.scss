@@ -1,0 +1,42 @@
+.journey-content {
+  display: flex;
+  height: 100vh;
+  padding: 0 2rem;
+  .title {
+    align-self: center;
+    width: 20%;
+  }
+  .lerning, .licenses {
+    width: 30%;
+    padding: 6rem 2rem;
+    &:before {
+      background-color: #af40c9;
+      content: '';
+      display: block;
+      height: 1px;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      list-style: none;
+      width: 100%;
+      li {
+        padding: 1rem  1rem 1rem 0;
+      }
+    }
+  }
+  .licenses {
+    height: 50px;
+    width: 50%;
+    ul {
+      flex-wrap: wrap;
+      li {
+        height: 3.7rem;
+        width: 50%;
+      }
+    }
+  }
+}

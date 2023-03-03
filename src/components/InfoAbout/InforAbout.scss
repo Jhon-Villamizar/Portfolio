@@ -1,0 +1,13 @@
+.about-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  .info{
+    text-align: justify;
+    padding: 2rem;
+    width: 50%;
+  }
+  .img{
+    width: 50%;
+  }
+}

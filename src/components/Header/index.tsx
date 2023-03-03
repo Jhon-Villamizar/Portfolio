@@ -1,9 +1,13 @@
-import React from 'react'
+import './header.scss'
 
 const Header = () => {
   return (
-    <div>
-      <div>Header</div>
+    <div className='container-header'>
+      <h1>
+        Hello, i am <br />
+        Jhon Villamizar
+      </h1>
+      <h4>Software developer fullstack</h4>
     </div>
   )
 }

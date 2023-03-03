@@ -9,7 +9,7 @@ import Experience from './pages/Experince'
 import Skills from './pages/Skills'
 import NotFound from './pages/NotFound'
 import './App.scss'
-import { AdminConsumer } from './store/Context'
+import Journey from './pages/Journey'
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path='Portfolio/' element={<Home />} />
           <Route path='Portfolio/about' element={<About />} />
+          <Route path='Portfolio/journey' element={<Journey />} />
           <Route path='Portfolio/contact' element={<Contact />} />
           <Route path='Portfolio/experience' element={<Experience />} />
           <Route path='Portfolio/skills' element={<Skills />} />
