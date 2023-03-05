@@ -1,10 +1,11 @@
 import React from 'react'
+import InfoSkills from '../../components/infoSkills'
 
 const Skills = () => {
   return (
-    <div>
-      <div>Skills</div>
-    </div>
+    <>
+      <InfoSkills />
+    </>
   )
 }
 

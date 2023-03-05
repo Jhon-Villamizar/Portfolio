@@ -3,9 +3,9 @@ import InfoAbout from '../../components/InfoAbout'
 
 const About = () => {
   return (
-    <div>
+    <>
       <InfoAbout />
-    </div>
+    </>
   )
 }
 

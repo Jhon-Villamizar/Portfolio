@@ -1,0 +1,25 @@
+.skill-content {
+  display: flex;
+  height: 100vh;padding: 70px 50px;
+  .title {
+    align-self: center;
+    width: 30%;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+    .data {
+      margin-bottom: 0.2rem;
+      padding: 0.5rem;
+      width: 25%;
+      .title-data {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+    }
+  }
+}
