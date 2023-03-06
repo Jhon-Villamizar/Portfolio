@@ -12,7 +12,7 @@ const Header = () => {
         <h4>Software developer fullstack</h4>
       </div>
       <div className='header-img'>
-        <img src={me} alt='' />
+        <img src={me} alt='me' />
       </div>
     </div>
   )
