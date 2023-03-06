@@ -11,7 +11,7 @@ const Header = () => {
         <h4>Software developer fullstack</h4>
       </div>
       <div className='header-img'>
-        <img src='assets/2.png' alt='' />
+        <img src='2.png' alt='' />
       </div>
     </div>
   )
