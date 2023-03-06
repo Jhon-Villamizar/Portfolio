@@ -1,0 +1,25 @@
+.contact-content {
+  display: flex;
+  height: 100vh;
+  padding: 6rem 2rem;
+  .info {
+    width: 50%;
+    .data {
+      display: flex;
+      flex-direction: column;
+      .img {
+        width: 2rem;
+      }
+      .text {
+        margin-bottom: 2rem;
+        p {
+          margin-bottom: 0.5rem;
+          &:first-child {
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

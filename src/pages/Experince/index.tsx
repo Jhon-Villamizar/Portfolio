@@ -1,10 +1,10 @@
-import React from 'react'
+import InfoExperience from '../../components/InfoExperience'
 
 const Experience = () => {
   return (
-    <div>
-      <div>Experience</div>
-    </div>
+    <>
+      <InfoExperience />
+    </>
   )
 }
 

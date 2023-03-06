@@ -8,6 +8,9 @@ const Header = () => {
         Jhon Villamizar
       </h1>
       <h4>Software developer fullstack</h4>
+      <div>
+        <img src='' alt='' />
+      </div>
     </div>
   )
 }

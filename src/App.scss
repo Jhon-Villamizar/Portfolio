@@ -32,10 +32,13 @@ p, li {
   font-size: 1rem;
   font-weight: 500;
 }
+b {
+  font-size: 1rem;
+}
 
 .dark {
   background-color: #131a1b;
-  h1, h2, h3, h5, h6, p, li, label, span {
+  h1, h2, h3, h5, h6, p, li, label, span, b {
     color: #f5f5dc
   }
   progress {
@@ -55,13 +58,13 @@ p, li {
 
 .light {
   background-color: #f5f5dc;
-  h1, h2, h3, h5, h6, p, li, label, span {
+  h1, h2, h3, h5, h6, p, li, label, span, b {
     color: #131a1b
   }
   progress {
     border-radius: 7px;
     width: 100%;
-    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+    box-shadow: 1px 1px 4px #131a1b7c;
   }
   progress::-webkit-progress-bar {
     background-color: #af40c9;

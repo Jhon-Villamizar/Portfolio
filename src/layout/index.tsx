@@ -1,6 +1,6 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { FC, PropsWithChildren, useEffect } from 'react'
-import HeaderConfig from '../components/HeaderConfig/HeaderConfig'
+import HeaderConfig from '../components/HeaderConfig'
 import { AdminConsumer } from '../store/Context'
 import './layout.scss'
 
