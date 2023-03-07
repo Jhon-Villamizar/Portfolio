@@ -1,12 +1,20 @@
 .projects-container {
+  background-image: url('../../img/11.png');
+  background-position-y: 6rem;
+  background-repeat: no-repeat;
+  background-size: 88%;
   display: flex;
   height: 100vh;
   padding: 6rem 2rem;
   .img{
-    width: 30%;
+    width: 40%;
+    img {
+      margin-left: -2.5rem;
+      width: 90rem;
+    }
   }
   .info{
-    width: 70%;
+    width: 60%;
     div {
       margin: 3rem 0;
     }

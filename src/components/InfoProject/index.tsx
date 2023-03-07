@@ -1,10 +1,13 @@
 /*eslint-disable react/no-unescaped-entities */
 import './InfoProject.scss'
+import code from '../../img/12.png'
 
 const InfoProjects = () => {
   return (
     <div className='projects-container'>
-      <div className='img'></div>
+      <div className='img'>
+        <img src={code} alt='' />
+      </div>
       <div className='info'>
         <h3>Projects</h3>
         <div>

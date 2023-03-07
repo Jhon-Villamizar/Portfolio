@@ -1,13 +1,27 @@
 .about-container {
   align-items: center;
+  background-image: url('../../img/4.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
   display: flex;
   height: 100vh;
   .info{
     text-align: justify;
-    padding: 2rem;
+    padding: 0 6rem;
     width: 50%;
   }
   .img{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     width: 50%;
+    img {
+      position: absolute;
+      right: -11rem;
+      top: 11rem;
+      width: 152%;
+    }
   }
 }

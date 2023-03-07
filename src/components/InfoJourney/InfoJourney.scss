@@ -1,9 +1,16 @@
 .journey-content {
+  background-image: url('../../img/6.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
   display: flex;
   height: 100vh;
-  padding: 0 2rem;
   .title {
-    align-self: center;
+    align-items: center;
+    background-image: url('../../img/5.png');
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    padding: 0 2rem 0 6rem;
     width: 20%;
   }
   .lerning, .licenses {

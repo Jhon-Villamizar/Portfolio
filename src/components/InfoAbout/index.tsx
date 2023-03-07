@@ -1,4 +1,5 @@
 import './InforAbout.scss'
+import otherMe from '../../img/1.png'
 
 const InfoAbout = () => {
   return (
@@ -15,7 +16,9 @@ const InfoAbout = () => {
           agile methodologies like Scrum, and Kanban
         </p>
       </div>
-      <div className='img'></div>
+      <div className='img'>
+        <img src={otherMe} alt='' />
+      </div>
     </div>
   )
 }

@@ -1,8 +1,14 @@
 .contact-content {
+  background-image: url('../../img/13.png');
+  background-repeat: no-repeat;
   display: flex;
   height: 100vh;
-  padding: 6rem 2rem;
+  justify-content: center;
   .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem;
     width: 50%;
     .data {
       display: flex;
@@ -21,5 +27,12 @@
         }
       }
     }
+  }
+  .form {
+    background-image: url('../../img/14.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
+    width: 50%;
   }
 }

@@ -27,9 +27,14 @@ const HeaderConfig = () => {
   return (
     <div className='config-container'>
       <div className='config-bar'>
-        <button className='App' onClick={() => updateTheme(theme === 'dark' ? 'light' : 'dark')}>
-          App
-        </button>
+        <label className='switch'>
+          <input
+            type='checkbox'
+            defaultChecked={theme === 'dark' ? true : false}
+            onChange={() => updateTheme(theme === 'dark' ? 'light' : 'dark')}
+          />
+          <span className='slider round'></span>
+        </label>
         <select
           defaultValue={i18n.language}
           onChange={({ target }) => handlerLanguage(target.value)}
