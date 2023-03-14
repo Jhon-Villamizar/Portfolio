@@ -38,7 +38,7 @@ b {
 
 .dark {
   background-color: #131a1b;
-  h1, h2, h3, h5, h6, p, li, label, span, b {
+  h1, h2, h3, h5, h6, p, li, label, span, b, .selected-option {
     color: #f5f5dc
   }
   progress {
@@ -58,9 +58,10 @@ b {
 
 .light {
   background-color: #f5f5dc;
-  h1, h2, h3, h5, h6, p, li, label, span, b {
+  h1, h2, h3, h5, h6, p, li, label, span, b, .selected-option {
     color: #131a1b
   }
+
   progress {
     border-radius: 7px;
     width: 100%;
