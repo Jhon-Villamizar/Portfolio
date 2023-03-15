@@ -9,7 +9,6 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div className={`container-layout ${theme}`}>
-      <HeaderConfig />
       <div className='container'>{children}</div>
     </div>
   )

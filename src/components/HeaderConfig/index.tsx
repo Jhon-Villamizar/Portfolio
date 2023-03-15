@@ -2,10 +2,11 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect, useReducer, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { BsFillSunFill } from 'react-icons/bs'
+import { BsFillSunFill, BsHouse } from 'react-icons/bs'
 import { RiMoonFill } from 'react-icons/ri'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import i18n from 'i18next'
+import { Link, useLocation } from 'react-router-dom'
 import { AdminConsumer } from '../../store/Context'
 import spain from '../../img/spain.png'
 import english from '../../img/unitedKingdom.png'
@@ -14,11 +15,12 @@ import './HeaderConfig.scss'
 
 const HeaderConfig = () => {
   const [show, setShow] = useState(false)
+  const location = useLocation()
   const { t } = useTranslation(['texts'])
   const { theme, language, updateLanguage, updateTheme } = AdminConsumer()
 
   useEffect(() => {
-    console.log('effect state => ', language, i18n.language, theme)
+    console.log('effect state => ', language, i18n.language, theme, location.pathname)
     i18n.changeLanguage(language)
   }, [language, theme])
 
@@ -35,13 +37,32 @@ const HeaderConfig = () => {
     <div className='config-container'>
       <nav className='menu'>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Journey</li>
-          <li>Skills</li>
-          <li>Experience</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          {location.pathname !== '/Portfolio/' ? (
+            <li>
+              <Link to={'Portfolio/'}>
+                <BsHouse />
+              </Link>
+            </li>
+          ) : null}
+
+          <li>
+            <Link to={'Portfolio/about'}>About</Link>
+          </li>
+          <li>
+            <Link to={'Portfolio/journey'}>Journey</Link>
+          </li>
+          <li>
+            <Link to={'Portfolio/skills'}>Skills</Link>
+          </li>
+          <li>
+            <Link to={'Portfolio/experience'}>Experience</Link>
+          </li>
+          <li>
+            <Link to={'Portfolio/projects'}>Projects</Link>
+          </li>
+          <li>
+            <Link to={'Portfolio/contact'}>Contact</Link>
+          </li>
         </ul>
       </nav>
       <div className='config-bar'>

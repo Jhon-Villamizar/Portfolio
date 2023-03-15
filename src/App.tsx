@@ -11,11 +11,14 @@ import NotFound from './pages/NotFound'
 import './App.scss'
 import Journey from './pages/Journey'
 import Projects from './pages/Projects'
+import HeaderConfig from './components/HeaderConfig'
 
 const App = () => {
   return (
     <Layout>
       <BrowserRouter>
+        <HeaderConfig />
+
         <Routes>
           <Route path='Portfolio/' element={<Home />} />
           <Route path='Portfolio/about' element={<About />} />
