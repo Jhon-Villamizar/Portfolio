@@ -1,5 +1,5 @@
 import './InforAbout.scss'
-import otherMe from '../../img/1.png'
+import otherMe from '../../img/png/1.png'
 
 const InfoAbout = () => {
   return (

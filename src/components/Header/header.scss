@@ -1,5 +1,5 @@
 .container-header {
-  background-image: url('../../img/3.png');
+  background-image: url('../../img/png/3.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -12,6 +12,18 @@
     width: 50%;
     .button {
       width: 80%;
+      button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        svg {
+          height: 2rem;
+          position: absolute;
+          right: 1.5rem;
+          width: 2rem;
+        }
+      }
     }
   }
   .header-img {

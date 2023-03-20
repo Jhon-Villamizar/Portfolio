@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $black: #131a1b;
-$white: #f5f5dc;
+$white: #fdfdfd;
 $violet: #af40c9;
 $gray: #545454;
 $black_transparent: #131a1b7c;
@@ -44,17 +44,22 @@ b {
   font-size: 1rem;
 }
 
+button {
+  appearance: none;
+  background-color: $violet;
+  border: none;
+  border-radius: 2rem;
+  color: $white;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  width: 70%;
+}
+
 .dark {
   background-color: $black;
   h1, h2, h3, h5, h6, p, li, label, span, b, a, .selected-option {
     color: $white
-  }
-
-  button {
-    appearance: none;
-    border: 1px solid $white;
-    border-radius: 15px;
-    padding: 1.5rem 10rem;
   }
 
   progress {
@@ -70,19 +75,15 @@ b {
     background-color: $violet;
     border-radius: 7px;
   }
+  .card-content {
+    border: 1px solid $white;
+  }
 }
 
 .light {
   background-color: $white;
   h1, h2, h3, h5, h6, p, li, label, span, b, a, .selected-option {
     color: $black
-  }
-
-  button {
-    appearance: none;
-    border: 1px solid $black;
-    border-radius: 15px;
-    padding: 1.5rem 10rem;
   }
 
   progress {
@@ -97,5 +98,8 @@ b {
   progress::-webkit-progress-value {
     background-color: $black;
     border-radius: 7px;
+  }
+  .card-content {
+    border: 1px solid $black;
   }
 }

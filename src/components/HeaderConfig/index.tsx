@@ -1,6 +1,6 @@
 /*eslint-disable react/no-unknown-property */
 /*eslint-disable @typescript-eslint/no-empty-function */
-import { useEffect, useReducer, useState } from 'react'
+import { SyntheticEvent, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BsFillSunFill, BsHouse } from 'react-icons/bs'
 import { RiMoonFill } from 'react-icons/ri'
@@ -8,8 +8,8 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import i18n from 'i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { AdminConsumer } from '../../store/Context'
-import spain from '../../img/spain.png'
-import english from '../../img/unitedKingdom.png'
+import spain from '../../img/png/spain.png'
+import english from '../../img/png/unitedKingdom.png'
 import '../../i18n/index'
 import './HeaderConfig.scss'
 
@@ -22,6 +22,7 @@ const HeaderConfig = () => {
   useEffect(() => {
     console.log('effect state => ', language, i18n.language, theme, location.pathname)
     i18n.changeLanguage(language)
+    setShow(false)
   }, [language, theme])
 
   const handlerLanguage = (value: string): void => {
@@ -43,7 +44,9 @@ const HeaderConfig = () => {
                 <BsHouse />
               </Link>
             </li>
-          ) : null}
+          ) : (
+            <li></li>
+          )}
 
           <li>
             <Link to={'Portfolio/about'}>About</Link>
@@ -57,9 +60,9 @@ const HeaderConfig = () => {
           <li>
             <Link to={'Portfolio/experience'}>Experience</Link>
           </li>
-          <li>
+          {/*<li>
             <Link to={'Portfolio/projects'}>Projects</Link>
-          </li>
+          </li> */}
           <li>
             <Link to={'Portfolio/contact'}>Contact</Link>
           </li>

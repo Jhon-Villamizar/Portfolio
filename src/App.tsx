@@ -25,7 +25,7 @@ const App = () => {
           <Route path='Portfolio/journey' element={<Journey />} />
           <Route path='Portfolio/skills' element={<Skills />} />
           <Route path='Portfolio/experience' element={<Experience />} />
-          <Route path='Portfolio/projects' element={<Projects />} />
+          {/*<Route path='Portfolio/projects' element={<Projects />} /> */}
           <Route path='Portfolio/contact' element={<Contact />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

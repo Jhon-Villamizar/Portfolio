@@ -122,12 +122,15 @@
     }
   }
   .menu{
-    width: 50%;
+    width: 40%;
     ul {
       display: flex;
       justify-content: space-between;
       li {
-        list-style: none
+        list-style: none;
+        &:first-child {
+          width: 17px;
+        }
       }
     }
   }

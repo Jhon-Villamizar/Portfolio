@@ -1,6 +1,15 @@
+/*eslint-disable @typescript-eslint/no-empty-function */
+import { useEffect } from 'react'
+import { AdminConsumer } from '../../store/Context'
+import { Experience } from '../../store/moks/experience'
+import Card from '../Card'
 import './InfoExperience.scss'
 
 const InfoExperience = () => {
+  const { theme } = AdminConsumer()
+
+  useEffect(() => {}, [theme])
+
   return (
     <div className='experience-container'>
       <div className='title'>
@@ -8,24 +17,17 @@ const InfoExperience = () => {
       </div>
       <div className='info'>
         <ul>
-          <li>
-            Devsavant: <br /> Software Developer. Apr 2022-Nov 2022
-          </li>
-          <li>
-            Perficient: <br /> Software Developer. Nov 2021-Apr 2022
-          </li>
-          <li>
-            Globant: <br /> Web UI Developer. Nov 2020- Oct 2021
-          </li>
-          <li>
-            NetConsult: <br /> Full Stack Developer. May 2020-Sep 2020
-          </li>
-          <li>
-            Chef Company: <br /> Frontend Developer. Jul 2019-Apr 2020
-          </li>
-          <li>
-            Pratech: <br /> Backend Developer. Aug 2018-Jul 2019
-          </li>
+          {Experience.map((item) => (
+            <li key={item.company}>
+              <Card
+                company={item.company}
+                position={item.position}
+                time={item.time}
+                description={item.description}
+                img={item.img2 && theme === 'dark' ? item.img2 : item.img}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

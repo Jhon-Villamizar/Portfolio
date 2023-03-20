@@ -1,6 +1,6 @@
 /*eslint-disable react/no-unescaped-entities */
 import './InfoProject.scss'
-import code from '../../img/12.png'
+import code from '../../img/png/12.png'
 
 const InfoProjects = () => {
   return (

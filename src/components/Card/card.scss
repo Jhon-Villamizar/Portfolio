@@ -1,0 +1,24 @@
+@import '../../App.scss';
+.card-content {
+  border: 1px solid $white;
+  border-radius: 0.5rem;
+  height: 7rem;
+  overflow-y: scroll;
+  padding: 1rem;
+  width: 25rem;
+  img {
+    height: 2rem;
+    width: 7rem;
+  }
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .description {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 300 !important;
+    overflow: hidden;
+  }
+}
