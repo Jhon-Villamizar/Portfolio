@@ -18,7 +18,6 @@ const App = () => {
     <Layout>
       <BrowserRouter>
         <HeaderConfig />
-
         <Routes>
           <Route path='Portfolio/' element={<Home />} />
           <Route path='Portfolio/about' element={<About />} />

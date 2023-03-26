@@ -4,6 +4,7 @@ import { SyntheticEvent, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BsFillSunFill, BsHouse } from 'react-icons/bs'
 import { RiMoonFill } from 'react-icons/ri'
+import { CgMenuRound } from 'react-icons/cg'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import i18n from 'i18next'
 import { Link, useLocation } from 'react-router-dom'
@@ -68,6 +69,9 @@ const HeaderConfig = () => {
           </li>
         </ul>
       </nav>
+      <div className='mobil-menu'>
+        <CgMenuRound className='icon-menu' onClick={handlerMenu} />
+      </div>
       <div className='config-bar'>
         <label className='switch'>
           <div className='sun'>
@@ -98,7 +102,6 @@ const HeaderConfig = () => {
           </div>
         </div>
       </div>
-      {/*<CgMenuRound className='menu' onClick={handlerMenu} /> */}
     </div>
   )
 }

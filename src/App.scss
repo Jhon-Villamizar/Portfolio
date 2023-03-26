@@ -78,6 +78,9 @@ button {
   .card-content {
     border: 1px solid $white;
   }
+  .icon-menu {
+    color: $white;
+  }
 }
 
 .light {
@@ -101,5 +104,8 @@ button {
   }
   .card-content {
     border: 1px solid $black;
+  }
+  .icon-menu {
+    color: $black;
   }
 }

@@ -2,13 +2,14 @@
   background-image: url('../../img/png/3.png');
   background-position: right bottom;
   background-repeat: no-repeat;
+  background-size: 80%;
   display: flex;
   height: 100vh;
   .header-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 6rem 0 6rem 6rem;
+    padding: 6rem 0 6rem 5%;
     width: 50%;
     .button {
       width: 80%;
@@ -34,6 +35,62 @@
       position: absolute;
       bottom: 0;
       left: 0;
+    }
+  }
+  @media (min-width: 320px) {
+    background-position: unset;
+    flex-direction: column;
+    padding: 6rem 1rem 0.5rem;
+    .header-info {
+      height: 60%;
+      justify-content: space-between;
+      padding: unset;
+      width: 100%;
+      .title {
+        text-align: center;
+        h1 {
+          font-size: 3rem;
+        }
+        h4 {
+          font-size: 1.5rem;
+        }
+      }
+      .button {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    .header-img {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .header-info {
+      padding: 6rem 0 6rem 5%;
+    }
+    .header-img {
+      img {
+        left: 28%;
+        width: 136%;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .header-info {
+      padding: 6rem 0 6rem 10%;
+    }
+  }
+  @media (min-width: 1920px) {
+    .header-info {
+      padding: 6rem 0 6rem 15%;
+    }
+    .header-img {
+      img {
+        left: 0;
+        width: unset;
+      }
     }
   }
 }
