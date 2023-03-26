@@ -1,10 +1,10 @@
+@import '../../App.scss';
 .container-header {
   background-image: url('../../img/png/3.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 80%;
   display: flex;
-  height: 100vh;
   .header-info {
     display: flex;
     flex-direction: column;
@@ -37,28 +37,41 @@
       left: 0;
     }
   }
-  @media (min-width: 320px) {
-    background-position: unset;
+  @media (min-width: 1px) and (max-width: 667px) {
+    background-position: 100% 100%;
+    background-size: cover;
     flex-direction: column;
-    padding: 6rem 1rem 0.5rem;
+    height: 100%;
+    padding: unset;
     .header-info {
-      height: 60%;
-      justify-content: space-between;
-      padding: unset;
+      background-image: url('../../img/png/2.png');
+      background-position: 22% 100%;
+      background-repeat: no-repeat;
+      background-size: 250%;
+      height: 100%;
+      justify-content: space-around;
+      padding: 0 5%;
       width: 100%;
       .title {
+        padding-top: 2rem;
         text-align: center;
         h1 {
-          font-size: 3rem;
+          font-size: 3.7rem;
         }
         h4 {
           font-size: 1.5rem;
+          text-shadow: 0 0 0.5rem $white;
+          color: $black;
+          margin-top: 2rem;
         }
       }
       .button {
         width: 100%;
         button {
-          width: 100%;
+          font-size: 1rem;
+          margin: 0 auto;
+          padding: 0.5rem 1rem;
+          width: 80%;
         }
       }
     }

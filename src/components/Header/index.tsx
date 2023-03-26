@@ -14,7 +14,9 @@ const Header = () => {
             Hello, I am <br />
             Jhon Villamizar
           </h1>
-          <h4>Software developer fullstack</h4>
+          <h4>
+            Software developer <br /> fullstack
+          </h4>
         </div>
         <div className='button'>
           <button onClick={() => navigate('/Portfolio/contact')}>
