@@ -19,6 +19,17 @@ const InfoContact = () => {
         </div>
       </div>
       <div className='form'></div>
+      <div className='data-mobile'>
+        <div className='text'>
+          <p>Email</p>
+          <p>jhamiltonvo@gmail.com</p>
+          <p>jhonvio@hotmail.com</p>
+        </div>
+        <div className='text'>
+          <p>Phone</p>
+          <p>(+57) 3166833681</p>
+        </div>
+      </div>
     </div>
   )
 }

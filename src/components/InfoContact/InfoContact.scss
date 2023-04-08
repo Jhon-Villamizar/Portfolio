@@ -35,4 +35,55 @@
     padding: 6rem 2rem;
     width: 50%;
   }
+  .data-mobile {
+    display: none;
+  }
+  @media (min-width: 280px) and (max-width: 1023px) {
+    flex-direction: column;
+    height: unset;
+    .info{
+      padding: 5rem 1rem 0;
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      .data {
+        display: none;
+      }
+    }
+    .form{}
+    .data-mobile {
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 1rem 0;
+      .img {
+        width: 2rem;
+      }
+      .text {
+        margin-bottom: 2rem;
+        p {
+          margin-bottom: 0.5rem;
+          &:first-child {
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 668px) and (max-width: 1023px) {
+
+  }
+  @media (min-width: 1920px) {
+    .info {
+      padding: 0 4rem 0 15rem;
+    }
+  }
+  @media (min-width: 2000px) {
+    .info {
+      padding: 0 4rem 0 22rem;
+    }
+  }
 }

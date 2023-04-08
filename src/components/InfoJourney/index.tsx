@@ -5,7 +5,7 @@ const InfoJourney = () => {
     <div className='journey-content'>
       <div className='title'>
         <h3>
-          My
+          My{'\u00A0'}
           <br />
           Journey
         </h3>

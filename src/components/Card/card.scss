@@ -21,4 +21,14 @@
     font-weight: 300 !important;
     overflow: hidden;
   }
+  @media (min-width: 1024px) and (max-width: 1650px){
+    height: fit-content;
+    overflow-y: unset;
+    width: 99%;
+    p {
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
 }

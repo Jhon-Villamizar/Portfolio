@@ -46,4 +46,52 @@
       }
     }
   }
+  @media (min-width: 280px) and (max-width: 1023px) {
+    background-size: 40rem;
+    flex-direction: column;
+    .title {
+      background-size: 40rem;
+      display: block;
+      height: fit-content;
+      padding: 5rem 1rem 0;
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        br {
+          display: none;
+        }
+      }
+    }
+    .lerning, .licenses {
+      height: fit-content;
+      padding: 0 1rem;
+      width: 100%;
+      ul {
+        height: fit-content;
+        li {
+          height: fit-content;
+          padding: 1rem 0 0;
+          width: 100%;
+          &:last-child {
+            padding:  1rem 0 1rem;
+          }
+        }
+      }
+      &:before {
+        width: 75%;
+      }
+    }
+    .lerning {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .title {
+      padding: 0 2rem 0 14rem;
+      width: 35%;
+    }
+  }
 }

@@ -7,7 +7,7 @@
   height: 100vh;
   .info{
     text-align: justify;
-    padding: 0 6rem;
+    padding: 0 0 0 5rem;
     width: 50%;
   }
   .img{
@@ -19,9 +19,66 @@
     width: 50%;
     img {
       position: absolute;
-      right: -11rem;
-      top: 11rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 152%;
+    }
+  }
+  @media (min-width: 280px) and (max-width: 667px) {
+    background-position: 100% 100%;
+    background-size: 180%;
+    flex-direction: column;
+    .info {
+      background-image: url('../../img/png/1.png');
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      height: 100vh;
+      padding: 5rem 1rem 0;
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+    }
+    .img {
+      display: none;
+    }
+  }
+  @media (min-width: 668px) and (max-width: 1023px) {
+    background-position: -12rem 110%;
+    background-size: 100%;
+    flex-direction: column;
+    .info {
+      background-image: url('../../img/png/1.png');
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      height: 100vh;
+      padding: 5rem 4rem 0;
+      width: 100%;
+    }
+    .img {
+      display: none;
+    }
+  }
+  @media (min-width: 1100px) {
+    background-position: -5rem 7rem;
+    background-size: 111%;
+    .info {
+      padding: 0 0 0 9rem;
+    }
+  }
+  @media (min-width: 1920px) {
+    .info {
+      padding: 0 4rem 0 15rem;
+    }
+  }
+  @media (min-width: 2000px) {
+    .info {
+      padding: 0 4rem 0 22rem;
     }
   }
 }
