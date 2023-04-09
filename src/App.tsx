@@ -10,7 +10,7 @@ import './App.scss'
 import Journey from './pages/Journey'
 //import Projects from './pages/Projects'
 import HeaderConfig from './components/HeaderConfig'
-import MobilMenu from './components/MobilMenu'
+import MobilMenu from './components/MobileMenu'
 import { AdminConsumer } from './store/Context'
 
 const App = () => {
