@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BsArrowRightShort } from 'react-icons/bs'
-import me from '../../img/png/2.png'
+import me from '/img/png/2.png'
 import '../../i18n/index'
 import './header.scss'
 

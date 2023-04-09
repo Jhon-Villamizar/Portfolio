@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
 .contact-content {
-  background-image: url('../../img/png/13.png');
+  background-image: url('/img/png/13.png');
   background-repeat: no-repeat;
   display: flex;
   height: 100vh;
@@ -32,7 +32,7 @@
   }
   .form {
     align-items: center;
-    background-image: url('../../img/png/14.png');
+    background-image: url('/img/png/14.png');
     background-position: right bottom;
     background-repeat: no-repeat;
     display: flex;

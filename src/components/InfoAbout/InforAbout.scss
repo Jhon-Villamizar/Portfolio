@@ -1,6 +1,6 @@
 .about-container {
   align-items: center;
-  background-image: url('../../img/png/4.png');
+  background-image: url('/img/png/4.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -30,7 +30,7 @@
     background-size: 180%;
     flex-direction: column;
     .info {
-      background-image: url('../../img/png/1.png');
+      background-image: url('/img/png/1.png');
       background-position: 50% 80%;
       background-repeat: no-repeat;
       background-size: 150%;
@@ -52,7 +52,7 @@
     background-size: 100%;
     flex-direction: column;
     .info {
-      background-image: url('../../img/png/1.png');
+      background-image: url('/img/png/1.png');
       background-position: 50% 100%;
       background-repeat: no-repeat;
       background-size: 80%;

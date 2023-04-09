@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import './InforAbout.scss'
 import '../../i18n/index'
-import otherMe from '../../img/png/1.png'
+import otherMe from '/img/png/1.png'
 
 const InfoAbout = () => {
   const { t } = useTranslation(['texts'])
