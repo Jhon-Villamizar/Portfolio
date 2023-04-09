@@ -3,9 +3,15 @@ import { FC, PropsWithChildren, useEffect } from 'react'
 import HeaderConfig from '../components/HeaderConfig'
 import { AdminConsumer } from '../store/Context'
 import './layout.scss'
+import { useLocation } from 'react-router-dom'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
-  const { theme } = AdminConsumer()
+  const { theme, updateMenu } = AdminConsumer()
+  const location = useLocation()
+
+  useEffect(() => {
+    updateMenu(false)
+  }, [location])
 
   return (
     <div className={`container-layout ${theme}`}>

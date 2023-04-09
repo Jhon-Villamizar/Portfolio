@@ -18,7 +18,7 @@ const HeaderConfig = () => {
   const [show, setShow] = useState(false)
   const location = useLocation()
   const { t } = useTranslation(['texts'])
-  const { theme, language, updateLanguage, updateTheme } = AdminConsumer()
+  const { theme, language, menu, updateLanguage, updateTheme, updateMenu } = AdminConsumer()
 
   useEffect(() => {
     console.log('effect state => ', language, i18n.language, theme, location.pathname)
@@ -33,6 +33,7 @@ const HeaderConfig = () => {
 
   const handlerMenu = () => {
     console.log('menu')
+    updateMenu(!menu)
   }
 
   return (

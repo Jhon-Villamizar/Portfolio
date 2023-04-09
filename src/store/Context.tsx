@@ -6,9 +6,11 @@ const AdminContext = createContext<ContextType>({} as ContextType)
 export const AdminConsumer = () => useContext(AdminContext)
 
 const AdminProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { theme, language, updateTheme, updateLanguage } = useData()
+  const { theme, language, menu, updateTheme, updateLanguage, updateMenu } = useData()
   return (
-    <AdminContext.Provider value={{ theme, language, updateTheme, updateLanguage }}>
+    <AdminContext.Provider
+      value={{ theme, language, menu, updateTheme, updateLanguage, updateMenu }}
+    >
       {children}
     </AdminContext.Provider>
   )

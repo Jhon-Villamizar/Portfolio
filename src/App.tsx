@@ -1,6 +1,6 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect, useReducer } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Layout from './layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -12,24 +12,32 @@ import './App.scss'
 import Journey from './pages/Journey'
 import Projects from './pages/Projects'
 import HeaderConfig from './components/HeaderConfig'
+import MobilMenu from './components/MobilMenu'
+import { AdminConsumer } from './store/Context'
 
 const App = () => {
+  const { menu } = AdminConsumer()
+
   return (
-    <Layout>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Layout>
         <HeaderConfig />
-        <Routes>
-          <Route path='Portfolio/' element={<Home />} />
-          <Route path='Portfolio/about' element={<About />} />
-          <Route path='Portfolio/journey' element={<Journey />} />
-          <Route path='Portfolio/skills' element={<Skills />} />
-          <Route path='Portfolio/experience' element={<Experience />} />
-          {/*<Route path='Portfolio/projects' element={<Projects />} /> */}
-          <Route path='Portfolio/contact' element={<Contact />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </Layout>
+        {menu ? (
+          <MobilMenu />
+        ) : (
+          <Routes>
+            <Route path='Portfolio/' element={<Home />} />
+            <Route path='Portfolio/about' element={<About />} />
+            <Route path='Portfolio/journey' element={<Journey />} />
+            <Route path='Portfolio/skills' element={<Skills />} />
+            <Route path='Portfolio/experience' element={<Experience />} />
+            {/*<Route path='Portfolio/projects' element={<Projects />} /> */}
+            <Route path='Portfolio/contact' element={<Contact />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        )}
+      </Layout>
+    </BrowserRouter>
   )
 }
 

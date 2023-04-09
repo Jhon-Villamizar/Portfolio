@@ -26,12 +26,12 @@
     }
   }
   @media (min-width: 280px) and (max-width: 667px) {
-    background-position: 100% 100%;
+    background-position: 100% 80%;
     background-size: 180%;
     flex-direction: column;
     .info {
       background-image: url('../../img/png/1.png');
-      background-position: 50% 100%;
+      background-position: 50% 80%;
       background-repeat: no-repeat;
       background-size: 150%;
       height: 100vh;

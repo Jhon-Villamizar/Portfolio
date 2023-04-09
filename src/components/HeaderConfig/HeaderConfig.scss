@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .config-container {
   bottom: 0;
   display: flex;
@@ -123,7 +125,7 @@
     }
   }
   .menu{
-    width: 40%;
+    width: 67%;
     ul {
       display: flex;
       justify-content: space-between;
@@ -138,6 +140,13 @@
   .mobil-menu {
     display: none;
   }
+  .mobil-list {
+    background-color: $black;
+    height: 97vh;
+    position: absolute;
+    top: 3rem;
+    width: 104%;
+  }
   @media (min-width: 280px)  and (max-width: 540px) {
     top: 0.2rem;
     .config-bar {
@@ -146,8 +155,7 @@
       width: fit-content;
       .select {
         display: flex;
-        justify-content: center;
-        margin: 0 0 0 1rem;
+        margin: 0.7rem 0 0 1rem;
       }
     }
     .menu {
