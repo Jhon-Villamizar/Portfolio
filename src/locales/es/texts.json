@@ -1,0 +1,47 @@
+{
+  "menu": {
+    "list": {
+      "home": "Inicio",
+      "about": "Sobre Mi",
+      "journey": "Estudios",
+      "skills": "Conocimientos",
+      "experience": "Experiencias",
+      "contact": "Contacto",
+      "projects": "Projectos"
+    }
+  },
+  "home": {
+    "welcome": "Hola, Soy",
+    "subtitle": "Desarrollador de software",
+    "button": "Hablemos!"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "description": "Jhon ha trabajado como desarrollador de software durante 5 años en diferentes posiciones como backend, frontend, y full-stack developer, había manejado diferentes lenguajes de programación, C# (ASP . NET), y JavaScript principalmente, en particular con frameworks y librerías como NodeJS, Express, NestJS, Angular, RXJS, ReactJS, Redux (Redux-Saga), GraphQL, React Testing Library; hablando de bases de datos (SQL Server, MySQL ) y no relacionales (MongoDB, firebase), también lenguajes de marcado y estilos como HTML, Pug, CSS, Scss, Sass, Less; y metodologías ágiles como Scrum, y Kanban."
+  },
+  "journey": {
+    "title1": "Mis",
+    "title2": "Estudios",
+    "learning": "Titulos",
+    "certifications": "Licencias y certificaciones"
+  },
+  "skills": {
+    "subtitle": "Qué puedo hacer?",
+    "title1": "Habilidades y",
+    "title2": "Competencias"
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "contact": {
+    "title": "Ponte en contacto",
+    "email": "Email",
+    "phone": "Telefono",
+    "formTitle": "Escribe me!",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formSubject": "Asunto",
+    "formMessage": "Mensaje",
+    "button": "Enviar"
+  }
+}
