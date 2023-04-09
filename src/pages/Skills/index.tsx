@@ -1,5 +1,4 @@
-import React from 'react'
-import InfoSkills from '../../components/InfoSkills'
+import InfoSkills from '../../components/infoSkills'
 
 const Skills = () => {
   return (
