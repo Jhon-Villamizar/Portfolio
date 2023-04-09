@@ -1,6 +1,4 @@
-/*eslint-disable react/no-unknown-property */
-/*eslint-disable @typescript-eslint/no-empty-function */
-import { SyntheticEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BsFillSunFill, BsHouse } from 'react-icons/bs'
 import { RiMoonFill } from 'react-icons/ri'

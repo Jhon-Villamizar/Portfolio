@@ -1,4 +1,3 @@
-import { BsHouse } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import './MobileMenu.scss'
 

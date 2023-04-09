@@ -1,4 +1,4 @@
-import { createContext, FC, PropsWithChildren, useContext, useState } from 'react'
+import { createContext, FC, PropsWithChildren, useContext } from 'react'
 import { ContextType } from './ContextType'
 import { useData } from './useData'
 
