@@ -12,6 +12,8 @@ import pra from '../../img/svg/pratech.svg'
 import praWhite from '../../img/svg/pratechWhite.svg'
 import Card from '../Card'
 import './InfoExperience.scss'
+import { useTranslation } from 'react-i18next'
+import '../../i18n/index'
 
 export const Experience = [
   {
@@ -58,13 +60,14 @@ export const Experience = [
 
 const InfoExperience = () => {
   const { theme } = AdminConsumer()
+  const { t } = useTranslation(['texts'])
 
   useEffect(() => {}, [theme])
 
   return (
     <div className='experience-container'>
       <div className='title'>
-        <h3>Experience</h3>
+        <h3>{t('experience.title')}</h3>
       </div>
       <div className='info'>
         <ul>

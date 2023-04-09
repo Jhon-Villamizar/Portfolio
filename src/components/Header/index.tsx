@@ -1,26 +1,29 @@
-import './header.scss'
-import me from '../../img/png/2.png'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { BsArrowRightShort } from 'react-icons/bs'
+import me from '../../img/png/2.png'
+import '../../i18n/index'
+import './header.scss'
 
 const Header = () => {
   const navigate = useNavigate()
+  const { t } = useTranslation(['texts'])
 
   return (
     <div className='container-header'>
       <div className='header-info'>
         <div className='title'>
           <h1>
-            Hello, I am <br />
+            {t('home.welcome')} <br />
             Jhon Villamizar
           </h1>
           <h4>
-            Software developer <br /> fullstack
+            {t('home.subtitle')} <br /> fullstack
           </h4>
         </div>
         <div className='button'>
           <button onClick={() => navigate('/Portfolio/contact')}>
-            Get in touch. <BsArrowRightShort />
+            {t('home.button')} <BsArrowRightShort />
           </button>
         </div>
       </div>

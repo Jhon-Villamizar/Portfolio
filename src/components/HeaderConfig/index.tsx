@@ -49,22 +49,22 @@ const HeaderConfig = () => {
           )}
 
           <li>
-            <Link to={'Portfolio/about'}>About</Link>
+            <Link to={'Portfolio/about'}>{t('menu.list.about')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/journey'}>Journey</Link>
+            <Link to={'Portfolio/journey'}>{t('menu.list.journey')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/skills'}>Skills</Link>
+            <Link to={'Portfolio/skills'}>{t('menu.list.skills')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/experience'}>Experience</Link>
+            <Link to={'Portfolio/experience'}>{t('menu.list.experience')}</Link>
           </li>
           {/*<li>
-            <Link to={'Portfolio/projects'}>Projects</Link>
+            <Link to={'Portfolio/projects'}>{t('menu.list.projects')}</Link>
           </li> */}
           <li>
-            <Link to={'Portfolio/contact'}>Contact</Link>
+            <Link to={'Portfolio/contact'}>{t('menu.list.contact')}</Link>
           </li>
         </ul>
       </nav>

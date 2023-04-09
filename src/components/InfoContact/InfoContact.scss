@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .contact-content {
   background-image: url('../../img/png/13.png');
   background-repeat: no-repeat;
@@ -29,52 +31,82 @@
     }
   }
   .form {
+    align-items: center;
     background-image: url('../../img/png/14.png');
     background-position: right bottom;
     background-repeat: no-repeat;
-    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 6rem 12rem 6rem 1rem;
     width: 50%;
-  }
-  .data-mobile {
-    display: none;
+    form {
+      height: auto;
+      h5 {
+        text-align: center;
+        width: 100%;
+      }
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        margin-bottom: 1rem;
+        width: 100%;
+        label, input, textarea {
+          width: 100%;
+        }
+        input, textarea {
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+          &:focus-visible {
+            outline: $violet auto 1px;
+          }
+        }
+        textarea {
+          height: 8rem;
+        }
+        &:last-child {
+          margin-left: auto;
+          width: 50%;
+        }
+      }
+    }
   }
   @media (min-width: 280px) and (max-width: 1023px) {
+    background-size: 40rem;
     flex-direction: column;
-    height: unset;
+    overflow: auto;
     .info{
-      padding: 5rem 1rem 0;
+      padding: 17rem 1rem 0;
       width: 100%;
       h3 {
         font-size: 2rem;
         margin-bottom: 3rem;
         text-align: center;
       }
-      .data {
-        display: none;
-      }
     }
-    .form{}
-    .data-mobile {
-      display: flex;
-      flex-direction: column;
-      padding: 5rem 1rem 0;
-      .img {
-        width: 2rem;
-      }
-      .text {
-        margin-bottom: 2rem;
-        p {
-          margin-bottom: 0.5rem;
-          &:first-child {
-            font-weight: 700;
-            margin-bottom: 1rem;
-          }
-        }
-      }
+    .form{
+      background-size: 40rem;
+      padding: 0 1rem 1rem;
+      width: 100%;
+    }
+
+  }
+  @media (min-width: 377px) and (max-width: 667px) {
+    .info {
+      padding: 17rem 10% 0;
+
     }
   }
   @media (min-width: 668px) and (max-width: 1023px) {
+    .info {
+      padding: 17rem 15rem 0;
 
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    .form {
+      padding: 6rem 5rem 6rem 1rem;
+      background-size: 150%;
+    }
   }
   @media (min-width: 1920px) {
     .info {
