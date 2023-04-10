@@ -13,7 +13,7 @@
   "home": {
     "welcome": "Hola, Soy",
     "subtitle": "Desarrollador de software",
-    "button": "Hablemos!"
+    "button": "Contacta me!"
   },
   "about": {
     "title": "Acerca de mí",
@@ -34,10 +34,10 @@
     "title": "Experiencia"
   },
   "contact": {
-    "title": "Ponte en contacto",
+    "title": "Contacta me!",
     "email": "Email",
     "phone": "Telefono",
-    "formTitle": "Escribe me!",
+    "formTitle": "",
     "formName": "Nombre",
     "formEmail": "Email",
     "formSubject": "Asunto",
