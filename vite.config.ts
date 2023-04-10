@@ -17,7 +17,6 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/Portfolio',
   build: {
     rollupOptions: {
       input: 'index.html',
@@ -27,4 +26,5 @@ export default defineConfig({
     },
     ssr: false,
   },
+  base: '',
 })

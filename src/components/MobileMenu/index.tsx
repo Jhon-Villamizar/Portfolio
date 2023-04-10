@@ -10,9 +10,9 @@ const MobilMenu = () => {
   return (
     <div className='content-mobile-menu'>
       <ul>
-        {location.pathname !== '/Portfolio/' ? (
+        {location.pathname !== '/' ? (
           <li>
-            <Link to={'Portfolio/'}>
+            <Link to={'/'}>
               <h5>{t('menu.list.home')}</h5>
             </Link>
           </li>
@@ -21,30 +21,30 @@ const MobilMenu = () => {
         )}
 
         <li>
-          <Link to={'Portfolio/about'}>
+          <Link to={'/about'}>
             <h5>{t('menu.list.about')}</h5>
           </Link>
         </li>
         <li>
-          <Link to={'Portfolio/journey'}>
+          <Link to={'/journey'}>
             <h5>{t('menu.list.journey')}</h5>
           </Link>
         </li>
         <li>
-          <Link to={'Portfolio/skills'}>
+          <Link to={'/skills'}>
             <h5>{t('menu.list.skills')}</h5>
           </Link>
         </li>
         <li>
-          <Link to={'Portfolio/experience'}>
+          <Link to={'/experience'}>
             <h5>{t('menu.list.experience')}</h5>
           </Link>
         </li>
         {/*<li>
-            <Link to={'Portfolio/projects'}>{t('menu.list.projects')}</Link>
+            <Link to={'/projects'}>{t('menu.list.projects')}</Link>
           </li> */}
         <li>
-          <Link to={'Portfolio/contact'}>
+          <Link to={'/contact'}>
             <h5>{t('menu.list.contact')}</h5>
           </Link>
         </li>

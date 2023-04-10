@@ -24,13 +24,13 @@ const App = () => {
           <MobilMenu />
         ) : (
           <Routes>
-            <Route path='Portfolio/' element={<Home />} />
-            <Route path='Portfolio/about' element={<About />} />
-            <Route path='Portfolio/journey' element={<Journey />} />
-            <Route path='Portfolio/skills' element={<Skills />} />
-            <Route path='Portfolio/experience' element={<Experience />} />
-            {/*<Route path='Portfolio/projects' element={<Projects />} /> */}
-            <Route path='Portfolio/contact' element={<Contact />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/journey' element={<Journey />} />
+            <Route path='/skills' element={<Skills />} />
+            <Route path='/experience' element={<Experience />} />
+            {/*<Route path='/projects' element={<Projects />} /> */}
+            <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         )}

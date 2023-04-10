@@ -38,9 +38,9 @@ const HeaderConfig = () => {
     <div className='config-container'>
       <nav className='menu'>
         <ul>
-          {location.pathname !== '/Portfolio/' ? (
+          {location.pathname !== '/' ? (
             <li>
-              <Link to={'Portfolio/'}>
+              <Link to={'/'}>
                 <BsHouse />
               </Link>
             </li>
@@ -49,22 +49,22 @@ const HeaderConfig = () => {
           )}
 
           <li>
-            <Link to={'Portfolio/about'}>{t('menu.list.about')}</Link>
+            <Link to={'/about'}>{t('menu.list.about')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/journey'}>{t('menu.list.journey')}</Link>
+            <Link to={'/journey'}>{t('menu.list.journey')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/skills'}>{t('menu.list.skills')}</Link>
+            <Link to={'/skills'}>{t('menu.list.skills')}</Link>
           </li>
           <li>
-            <Link to={'Portfolio/experience'}>{t('menu.list.experience')}</Link>
+            <Link to={'/experience'}>{t('menu.list.experience')}</Link>
           </li>
           {/*<li>
-            <Link to={'Portfolio/projects'}>{t('menu.list.projects')}</Link>
+            <Link to={'/projects'}>{t('menu.list.projects')}</Link>
           </li> */}
           <li>
-            <Link to={'Portfolio/contact'}>{t('menu.list.contact')}</Link>
+            <Link to={'/contact'}>{t('menu.list.contact')}</Link>
           </li>
         </ul>
       </nav>

@@ -22,7 +22,7 @@ const Header = () => {
           </h4>
         </div>
         <div className='button'>
-          <button onClick={() => navigate('/Portfolio/contact')}>
+          <button onClick={() => navigate('/contact')}>
             {t('home.button')} <BsArrowRightShort />
           </button>
         </div>
