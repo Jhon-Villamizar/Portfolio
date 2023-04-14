@@ -19,7 +19,6 @@ const HeaderConfig = () => {
   const { theme, language, menu, updateLanguage, updateTheme, updateMenu } = AdminConsumer()
 
   useEffect(() => {
-    console.log('effect state => ', language, i18n.language, theme, location.pathname)
     i18n.changeLanguage(language)
     setShow(false)
   }, [language, theme])
@@ -30,7 +29,6 @@ const HeaderConfig = () => {
   }
 
   const handlerMenu = () => {
-    console.log('menu')
     updateMenu(!menu)
   }
 
