@@ -1,24 +1,15 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
 import { useTranslation } from 'react-i18next'
 import '../../i18n/index'
 import './InfoContact.scss'
 import Email from '../../service/email'
 import { EmailData } from '../../types/emailType'
 import { useEffect, useState } from 'react'
-
-const schema = yup
-  .object({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    subject: yup.string().required(),
-    message: yup.string().required(),
-  })
-  .required()
+import { schema } from '../../types/emamilSchema'
 
 const InfoContact = () => {
-  const [text, setText] = useState(true)
+  const [text, setText] = useState(false)
   const { t } = useTranslation(['texts'])
 
   useEffect(() => {
