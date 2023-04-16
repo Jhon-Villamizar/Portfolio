@@ -31,7 +31,19 @@
     "title2": "Competencias"
   },
   "experience": {
-    "title": "Experiencia"
+    "title": "Experiencia",
+    "ene": "Ene",
+    "feb": "Feb",
+    "mar": "Mar",
+    "abr": "Abr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "ago": "Ago",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dic": "Dic"
   },
   "contact": {
     "title": "Contacta me!",

@@ -31,7 +31,19 @@
     "title2": "Proficiencies"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "ene": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "abr": "Apr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "ago": "Ago",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dic": "Dic"
   },
   "contact": {
     "title": "Get in touch",

@@ -15,52 +15,52 @@ import './InfoExperience.scss'
 import { useTranslation } from 'react-i18next'
 import '../../i18n/index'
 
-export const Experience = [
-  {
-    company: 'Devsavant',
-    position: 'Software Developer',
-    time: 'Apr 2022 / Nov 2022',
-    img: dev,
-    img2: devWhite,
-  },
-  {
-    company: 'Perficient',
-    position: 'Software Developer',
-    time: 'Nov 2021 / Apr 2022',
-    img: per,
-    img2: perWhite,
-  },
-  {
-    company: 'Globant',
-    position: 'Web UI Developer',
-    time: 'Nov 2021 / Apr 2022',
-    img: glo,
-    img2: gloWhite,
-  },
-  {
-    company: 'NetConsult',
-    position: 'Full Stack Developer',
-    time: 'May 2020 / Sep 2020',
-    img: '',
-  },
-  {
-    company: 'Chef Company',
-    position: 'Frontend Developer',
-    time: 'Jul 2019 / Apr 2020',
-    img: iso,
-  },
-  {
-    company: 'Pratech',
-    position: 'Backend Developer',
-    time: 'Aug 2018 / Jul 2019',
-    img: pra,
-    img2: praWhite,
-  },
-]
-
 const InfoExperience = () => {
   const { theme } = AdminConsumer()
   const { t } = useTranslation(['texts'])
+
+  const Experience = [
+    {
+      company: 'Devsavant',
+      position: 'Software Developer',
+      time: `${t('experience.abr')} 2022 / ${t('experience.ene')} 2023`,
+      img: dev,
+      img2: devWhite,
+    },
+    {
+      company: 'Perficient',
+      position: 'Software Developer',
+      time: `${t('experience.nov')} 2021 / ${t('experience.abr')} 2022`,
+      img: per,
+      img2: perWhite,
+    },
+    {
+      company: 'Globant',
+      position: 'Web UI Developer',
+      time: `${t('experience.nov')} 2020 / ${t('experience.oct')} 2021`,
+      img: glo,
+      img2: gloWhite,
+    },
+    {
+      company: 'NetConsult',
+      position: 'Full Stack Developer',
+      time: `${t('experience.may')} 2020 / ${t('experience.sep')} 2020`,
+      img: '',
+    },
+    {
+      company: 'Chef Company',
+      position: 'Frontend Developer',
+      time: `${t('experience.jul')} 2019 / ${t('experience.abr')} 2020`,
+      img: iso,
+    },
+    {
+      company: 'Pratech',
+      position: 'Backend Developer',
+      time: `${t('experience.ago')} 2018 / ${t('experience.jul')} 2019`,
+      img: pra,
+      img2: praWhite,
+    },
+  ]
 
   useEffect(() => {}, [theme])
 
