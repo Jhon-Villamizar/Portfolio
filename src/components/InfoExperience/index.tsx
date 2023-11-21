@@ -1,6 +1,8 @@
 /*eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect } from 'react'
 import { AdminConsumer } from '../../store/Context'
+import cross from '/img/svg/crossbridge.svg'
+import crossWhite from '/img/svg/crossbridgeWhite.svg'
 import dev from '/img/svg/devsavant.svg'
 import devWhite from '/img/svg/devsavantWhite.svg'
 import glo from '/img/svg/globant.svg'
@@ -20,6 +22,13 @@ const InfoExperience = () => {
   const { t } = useTranslation(['texts'])
 
   const Experience = [
+    {
+      company: 'Crossbridge',
+      position: 'Software Developer',
+      time: `${t('experience.may')} 2023 / ${t('experience.nov')} 2023`,
+      img: cross,
+      img2: crossWhite,
+    },
     {
       company: 'Devsavant',
       position: 'Software Developer',

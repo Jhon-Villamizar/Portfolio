@@ -41,12 +41,13 @@
     width: 50%;
     form {
       height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
       h5, p {
         text-align: center;
         width: 100%;
       }
-      display: flex;
-      flex-wrap: wrap;
       div {
         margin-bottom: 1rem;
         width: 100%;
