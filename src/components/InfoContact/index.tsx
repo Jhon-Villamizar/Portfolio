@@ -45,46 +45,46 @@ const InfoContact = () => {
 
   return (
     <div className='contact-content'>
-      <div className='info'>
+      <div className='info' data-testid='contact-title'>
         <h3>{t('contact.title')}</h3>
         <div className='data'>
           <div className='img'></div>
-          <div className='text'>
+          <div className='text' data-testid='contact-email'>
             <p>{t('contact.email')}</p>
             <p>jhamiltonvo@gmail.com</p>
             <p>jhonvio@hotmail.com</p>
           </div>
-          <div className='text'>
+          <div className='text' data-testid='contact-phone'>
             <p>{t('contact.phone')}</p>
             <p>(+57) 3166833681</p>
           </div>
         </div>
       </div>
-      <div className='form'>
-        <form className='card-content' onSubmit={handleSubmit(onSubmit)}>
+      <div className='form' data-testid='contact-content'>
+        <form className='card-content' onSubmit={handleSubmit(onSubmit)} data-testid='contact-form'>
           {message()}
-          <div>
-            <label>{t('contact.formName')}: </label>
+          <div data-testid='contact-name'>
+            <label data-testid='input-name'>{t('contact.formName')}: </label>
             <input {...register('name')} />
             <p>{errors.name?.message}</p>
           </div>
-          <div>
-            <label>{t('contact.formEmail')}: </label>
+          <div data-testid='contact-email'>
+            <label data-testid='input-email'>{t('contact.formEmail')}: </label>
             <input {...register('email')} />
             <p>{errors.email?.message}</p>
           </div>
-          <div>
-            <label>{t('contact.formSubject')}: </label>
+          <div data-testid='contact-subject'>
+            <label data-testid='input-subject'>{t('contact.formSubject')}: </label>
             <input {...register('subject')} />
             <p>{errors.subject?.message}</p>
           </div>
-          <div>
-            <label>{t('contact.formMessage')}: </label>
+          <div data-testid='contact-message'>
+            <label data-testid='input-message'>{t('contact.formMessage')}: </label>
             <textarea {...register('message')} />
             <p>{errors.message?.message}</p>
           </div>
-          <div>
-            <input type='submit' value={t('contact.button') as string} />
+          <div data-testid='contact-button'>
+            <input type='submit' value={t('contact.button') as string} data-testid='input-send' />
           </div>
         </form>
       </div>

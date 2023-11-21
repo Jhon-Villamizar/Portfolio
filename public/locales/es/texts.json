@@ -17,7 +17,8 @@
   },
   "about": {
     "title": "Acerca de mí",
-    "description": "Jhon ha trabajado como desarrollador de software durante 5 años en diferentes posiciones como backend, frontend, y full-stack developer, había manejado diferentes lenguajes de programación, C# (ASP . NET), y JavaScript principalmente, en particular con frameworks y librerías como NodeJS, Express, NestJS, Angular, RXJS, ReactJS, Redux (Redux-Saga), GraphQL, React Testing Library; hablando de bases de datos (SQL Server, MySQL ) y no relacionales (MongoDB, firebase), también lenguajes de marcado y estilos como HTML, Pug, CSS, Scss, Sass, Less; y metodologías ágiles como Scrum, y Kanban."
+    "description1": "Jhon ha trabajado como desarrollador de software durante",
+    "description2": "años en diferentes posiciones como backend, frontend, y full-stack developer, había manejado diferentes lenguajes de programación, C# (ASP . NET), y JavaScript principalmente, en particular con frameworks y librerías como NodeJS, Express, NestJS, Angular, RXJS, ReactJS, Redux (Redux-Saga), GraphQL, React Testing Library; hablando de bases de datos (SQL Server, MySQL ) y no relacionales (MongoDB, firebase), también lenguajes de marcado y estilos como HTML, Pug, CSS, Scss, Sass, Less; y metodologías ágiles como Scrum, y Kanban."
   },
   "journey": {
     "title1": "Mis",

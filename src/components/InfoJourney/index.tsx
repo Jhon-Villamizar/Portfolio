@@ -7,20 +7,20 @@ const InfoJourney = () => {
 
   return (
     <div className='journey-content'>
-      <div className='title'>
+      <div className='title' data-testid='journey-title'>
         <h3>
           {t('journey.title1')} {'\u00A0'}
           <br />
           {t('journey.title2')}
         </h3>
       </div>
-      <div className='lerning'>
+      <div className='lerning' data-testid='lerning-title'>
         <h5>{t('journey.learning')}</h5>
         <ul>
           <li>Cesde. BS, Software Development.</li>
         </ul>
       </div>
-      <div className='licenses'>
+      <div className='licenses' data-testid='licenses-title'>
         <h5>{t('journey.certifications')}</h5>
         <ul>
           <li>Platzi. React.js</li>

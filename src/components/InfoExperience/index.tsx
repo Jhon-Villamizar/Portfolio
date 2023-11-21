@@ -75,13 +75,13 @@ const InfoExperience = () => {
 
   return (
     <div className='experience-container'>
-      <div className='title'>
+      <div className='title' data-testid='experience-title'>
         <h3>{t('experience.title')}</h3>
       </div>
-      <div className='info'>
-        <ul>
+      <div className='info' data-testid='experience-data'>
+        <ul data-testid='experience-list'>
           {Experience.map((item) => (
-            <li key={item.company}>
+            <li key={item.company} data-testid='experience-item'>
               <Card
                 company={item.company}
                 position={item.position}

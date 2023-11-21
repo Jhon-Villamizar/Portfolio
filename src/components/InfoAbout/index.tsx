@@ -8,9 +8,13 @@ const InfoAbout = () => {
 
   return (
     <div className='about-container'>
-      <div className='info'>
+      <div className='info' data-testid='about-text'>
         <h3>{t('about.title')}</h3>
-        <p>{t('about.description')}</p>
+        <p>
+          {`${t('about.description1')}
+          ${new Date().getFullYear() - 2017}
+          ${t('about.description2')}`}
+        </p>
       </div>
       <div className='img'>
         <img src={otherMe} alt='' />

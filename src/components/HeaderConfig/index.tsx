@@ -38,7 +38,7 @@ const HeaderConfig = () => {
         <ul>
           {location.pathname !== '/' ? (
             <li>
-              <Link to={'/'}>
+              <Link to={'/'} data-testid='link-home'>
                 <BsHouse />
               </Link>
             </li>
@@ -47,29 +47,39 @@ const HeaderConfig = () => {
           )}
 
           <li>
-            <Link to={'/about'}>{t('menu.list.about')}</Link>
+            <Link to={'/about'} data-testid='link-about'>
+              {t('menu.list.about')}
+            </Link>
           </li>
           <li>
-            <Link to={'/journey'}>{t('menu.list.journey')}</Link>
+            <Link to={'/journey'} data-testid='link-journey'>
+              {t('menu.list.journey')}
+            </Link>
           </li>
           <li>
-            <Link to={'/skills'}>{t('menu.list.skills')}</Link>
+            <Link to={'/skills'} data-testid='link-skills'>
+              {t('menu.list.skills')}
+            </Link>
           </li>
           <li>
-            <Link to={'/experience'}>{t('menu.list.experience')}</Link>
+            <Link to={'/experience'} data-testid='link-experience'>
+              {t('menu.list.experience')}
+            </Link>
           </li>
           {/*<li>
             <Link to={'/projects'}>{t('menu.list.projects')}</Link>
           </li> */}
           <li>
-            <Link to={'/contact'}>{t('menu.list.contact')}</Link>
+            <Link to={'/contact'} data-testid='link-contact'>
+              {t('menu.list.contact')}
+            </Link>
           </li>
         </ul>
       </nav>
       <div className='mobil-menu'>
-        <CgMenuRound className='icon-menu' onClick={handlerMenu} />
+        <CgMenuRound className='icon-menu' onClick={handlerMenu} data-testid='menu-mobile' />
       </div>
-      <div className='config-bar'>
+      <div className='config-bar' data-testid='config-bar'>
         <label className='switch'>
           <div className='sun'>
             <BsFillSunFill />
@@ -78,6 +88,7 @@ const HeaderConfig = () => {
             type='checkbox'
             defaultChecked={theme === 'dark' ? true : false}
             onChange={() => updateTheme(theme === 'dark' ? 'light' : 'dark')}
+            data-testid='theme-button'
           />
           <span className='slider round'></span>
           <div className='moon'>
@@ -85,15 +96,19 @@ const HeaderConfig = () => {
           </div>
         </label>
         <div className='select'>
-          <div className='selected-option' onClick={() => setShow(!show)}>
+          <div
+            className='selected-option'
+            onClick={() => setShow(!show)}
+            data-testid='language-drop'
+          >
             {i18n.language === 'es' ? <img src={spain} alt='' /> : <img src={english} alt='' />}
             {show ? <FaChevronUp /> : <FaChevronDown />}
           </div>
-          <div className={show ? 'option' : 'option--close'}>
+          <div className={show ? 'option' : 'option--close'} data-testid='language-es'>
             <div onClick={() => handlerLanguage('es')}>
               <img src={spain} alt='' />
             </div>
-            <div onClick={() => handlerLanguage('en')}>
+            <div onClick={() => handlerLanguage('en')} data-testid='language-en'>
               <img src={english} alt='' />
             </div>
           </div>

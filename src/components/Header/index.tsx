@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className='container-header'>
       <div className='header-info'>
-        <div className='title'>
+        <div className='title' data-testid='main-text'>
           <h1>
             {t('home.welcome')} <br />
             Jhon Villamizar
@@ -22,7 +22,7 @@ const Header = () => {
           </h4>
         </div>
         <div className='button'>
-          <button onClick={() => navigate('/contact')}>
+          <button onClick={() => navigate('/contact')} data-testid='contact-button'>
             {t('home.button')} <BsArrowRightShort />
           </button>
         </div>
